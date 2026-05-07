@@ -4,343 +4,333 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
     <title>演说家KB课程 | 北京一二年级英语招生</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            -webkit-tap-highlight-color: transparent;
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            -webkit-tap-highlight-color:transparent;
         }
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            background: #F8FAFE;
-            color: #1F2A3E;
-            line-height: 1.45;
-            overflow-x: hidden;
+        body{
+            font-family:'Inter',sans-serif;
+            background:#F8FAFE;
+            color:#1A2C3E;
+            line-height:1.6;
+            overflow-x:hidden;
+            font-size:16px;
         }
-        .container {
-            width: 100%;
-            max-width: 100%;
-            padding: 0 16px;
-            margin: 0 auto;
+        .container{
+            width:100%;
+            max-width:100%;
+            margin:0 auto;
+            padding:0 14px;
         }
-        .navbar {
-            background: rgba(255,255,255,0.96);
-            backdrop-filter: blur(8px);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            padding: 12px 16px;
-            border-bottom: 1px solid #eef2f6;
+        .navbar{
+            background:rgba(255,255,255,0.98);
+            backdrop-filter:blur(2px);
+            position:sticky;
+            top:0;
+            z-index:100;
+            box-shadow:0 1px 3px rgba(0,0,0,0.08);
+            padding:10px 0;
         }
-        .nav-flex {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+        .nav-flex{
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            flex-wrap:wrap;
         }
-        .logo h1 {
-            font-size: 1.5rem;
-            font-weight: 800;
-            background: linear-gradient(135deg, #1E6DFF, #C046FF);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            letter-spacing: -0.3px;
+        .logo h1{
+            font-size:1.25rem;
+            font-weight:800;
+            background:linear-gradient(135deg,#1E6DFF,#C046FF);
+            -webkit-background-clip:text;
+            background-clip:text;
+            color:transparent;
         }
-        .logo p {
-            font-size: 0.7rem;
-            color: #F97316;
-            font-weight: 600;
+        .logo p{
+            font-size:0.65rem;
+            color:#F97316;
+            font-weight:500;
         }
-        .btn-cta-nav {
-            background: #F97316;
-            color: white;
-            padding: 8px 18px;
-            border-radius: 40px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.85rem;
-            box-shadow: 0 2px 6px rgba(249,115,22,0.2);
+        .btn-cta-nav{
+            background:#F97316;
+            color:white;
+            padding:8px 14px;
+            border-radius:40px;
+            text-decoration:none;
+            font-weight:600;
+            font-size:0.8rem;
+            white-space:nowrap;
         }
-        section {
-            padding: 48px 0;
-            border-bottom: 1px solid #eef2f6;
+        section{
+            padding:30px 0;
+            border-bottom:1px solid rgba(0,0,0,0.04);
         }
-        .section-title {
-            font-size: 1.8rem;
-            font-weight: 700;
-            margin-bottom: 12px;
-            background: linear-gradient(120deg, #1E2F4F, #1E6DFF);
-            background-clip: text;
-            -webkit-background-clip: text;
-            color: transparent;
-            line-height: 1.2;
+        .section-title{
+            font-size:1.5rem;
+            font-weight:700;
+            margin-bottom:10px;
+            background:linear-gradient(120deg,#1E2F4F,#1E6DFF);
+            background-clip:text;
+            -webkit-background-clip:text;
+            color:transparent;
+            word-break:break-word;
+            line-height:1.3;
         }
-        .section-sub {
-            color: #5A6E84;
-            margin-bottom: 28px;
-            font-size: 0.95rem;
-            border-left: 4px solid #F97316;
-            padding-left: 14px;
+        .section-sub{
+            color:#5A6E84;
+            margin-bottom:20px;
+            font-size:0.95rem;
+            border-left:3px solid #F97316;
+            padding-left:12px;
+            line-height:1.5;
         }
-        .grid-2col, .grid-3col {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
+        .grid-2col, .grid-3col{
+            display:grid;
+            gap:16px;
+            grid-template-columns:1fr;
         }
-        .card {
-            background: white;
-            border-radius: 28px;
-            padding: 22px 20px;
-            box-shadow: 0 8px 24px rgba(0,0,0,0.04);
-            transition: 0.2s;
-            border: 1px solid rgba(0,0,0,0.03);
+        .card{
+            background:white;
+            border-radius:20px;
+            padding:20px 16px;
+            box-shadow:0 8px 20px rgba(0,0,0,0.05);
+            transition:0.25s;
+            border:1px solid rgba(0,0,0,0.03);
         }
-        .badge {
-            background: #FFF1E6;
-            color: #F97316;
-            font-weight: 600;
-            font-size: 0.7rem;
-            padding: 4px 12px;
-            border-radius: 40px;
-            display: inline-block;
-            margin-bottom: 14px;
+        .badge{
+            display:inline-block;
+            background:#FFF1E6;
+            color:#F97316;
+            font-weight:600;
+            font-size:0.75rem;
+            padding:4px 10px;
+            border-radius:50px;
+            margin-bottom:12px;
         }
-        h3 {
-            font-size: 1.35rem;
-            margin-bottom: 12px;
-            font-weight: 700;
+        h3{
+            font-size:1.15rem;
+            margin-bottom:10px;
+            font-weight:600;
+            line-height:1.4;
         }
-        .highlight-orange {
-            color: #F97316;
-            font-weight: 700;
+        .highlight-orange{
+            color:#F97316;
+            font-weight:700;
         }
-        .level-diagram {
-            background: linear-gradient(145deg, #EFF5FF, white);
-            border-radius: 28px;
-            padding: 20px;
-            margin-top: 24px;
-            font-size: 0.9rem;
-            border: 1px solid #eef2fa;
+        .level-diagram{
+            background:linear-gradient(145deg,#EFF5FF,white);
+            border-radius:20px;
+            padding:16px;
+            margin-top:16px;
+            font-size:0.9rem;
         }
-        .btn-primary, .btn-secondary {
-            display: inline-block;
-            padding: 12px 24px;
-            border-radius: 60px;
-            font-weight: 600;
-            text-decoration: none;
-            text-align: center;
-            font-size: 0.9rem;
-            transition: 0.2s;
+        .btn-primary{
+            background:#1E6DFF;
+            color:white;
+            padding:12px 20px;
+            border-radius:40px;
+            font-weight:600;
+            text-decoration:none;
+            display:inline-block;
+            box-shadow:0 4px 10px rgba(30,109,255,0.2);
+            transition:0.2s;
+            font-size:0.9rem;
+            text-align:center;
+            width:100%;
+            max-width:280px;
         }
-        .btn-primary {
-            background: #1E6DFF;
-            color: white;
-            box-shadow: 0 4px 10px rgba(30,109,255,0.25);
+        .btn-secondary{
+            background:white;
+            border:1.5px solid #1E6DFF;
+            color:#1E6DFF;
+            padding:10px 16px;
+            border-radius:40px;
+            font-weight:600;
+            text-decoration:none;
+            display:inline-block;
+            font-size:0.9rem;
+            text-align:center;
+            width:100%;
+            max-width:280px;
         }
-        .btn-secondary {
-            background: white;
-            border: 1.5px solid #1E6DFF;
-            color: #1E6DFF;
+        .hero{
+            background:linear-gradient(135deg,#F0F7FF,#E9F0FA);
+            padding:30px 0;
         }
-        .btn-group {
-            display: flex;
-            gap: 12px;
-            flex-wrap: wrap;
-            margin-top: 20px;
+        .hero-grid{
+            display:flex;
+            flex-direction:column;
+            gap:24px;
         }
-        .hero {
-            background: linear-gradient(135deg, #F0F7FF, #E9F0FA);
-            padding: 40px 0;
+        .hero-content{
+            flex:1;
         }
-        .hero-grid {
-            display: flex;
-            flex-direction: column;
-            gap: 28px;
+        .hero-badge{
+            background:#F97316;
+            color:white;
+            border-radius:40px;
+            padding:4px 12px;
+            display:inline-block;
+            margin-bottom:12px;
+            font-weight:600;
+            font-size:0.75rem;
         }
-        .hero-content h1 {
-            font-size: 2.2rem;
-            font-weight: 800;
-            line-height: 1.25;
-            margin-bottom: 14px;
+        .hero-content h1{
+            font-size:1.8rem;
+            font-weight:800;
+            line-height:1.25;
+            margin-bottom:12px;
         }
-        .hero-badge {
-            background: #F97316;
-            color: white;
-            border-radius: 40px;
-            padding: 5px 14px;
-            display: inline-block;
-            font-size: 0.75rem;
-            font-weight: 600;
-            margin-bottom: 16px;
+        .btn-group{
+            display:flex;
+            flex-direction:column;
+            gap:10px;
+            margin-top:16px;
+            align-items:center;
         }
-        .main-img {
-            background: #EFF3FA;
-            border-radius: 28px;
-            overflow: hidden;
-            width: 100%;
+        .main-img{
+            width:100%;
+            background:#EFF3FA;
+            border-radius:20px;
+            overflow:hidden;
         }
-        .main-img img {
-            width: 100%;
-            height: auto;
-            display: block;
+        .main-img img{
+            width:100%;
+            height:auto;
+            display:block;
         }
-        .kb-book-show {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 16px;
-            margin: 24px 0;
+        .kb-book-show{
+            display:flex;
+            flex-wrap:wrap;
+            gap:12px;
+            justify-content:center;
+            margin:20px 0;
         }
-        .book-card {
-            background: #FFF6E8;
-            border-radius: 24px;
-            padding: 14px 12px;
-            text-align: center;
-            box-shadow: 0 6px 12px rgba(0,0,0,0.03);
+        .book-card{
+            background:#FFF6E8;
+            border-radius:18px;
+            padding:12px;
+            width:calc(50% - 8px);
+            min-width:140px;
+            flex:1 1 auto;
+            text-align:center;
+            box-shadow:0 6px 12px rgba(0,0,0,0.05);
         }
-        .book-cover {
-            width: 100%;
-            aspect-ratio: 3 / 4;
-            background: #FBCF9E;
-            border-radius: 20px;
-            overflow: hidden;
-            margin-bottom: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        .book-cover{
+            width:100%;
+            height:130px;
+            border-radius:16px;
+            overflow:hidden;
+            margin-bottom:10px;
+            background:#FBCF9E;
+            display:flex;
+            align-items:center;
+            justify-content:center;
         }
-        .book-cover img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+        .book-cover img{
+            width:100%;
+            height:100%;
+            object-fit:cover;
         }
-        .gaosi-books {
-            display: flex;
-            justify-content: space-between;
-            gap: 8px;
-            margin: 12px 0 6px;
+        .gaosi-books{
+            display:flex;
+            gap:8px;
+            justify-content:center;
+            flex-wrap:wrap;
+            margin-top:8px;
         }
-        .gaosi-item {
-            flex: 1;
-            text-align: center;
+        .gaosi-item{
+            width:60px;
+            text-align:center;
         }
-        .gaosi-item .book-cover {
-            aspect-ratio: 1 / 1;
-            height: auto;
+        .gaosi-item .book-cover{
+            height:80px;
+            margin-bottom:6px;
         }
-        .highlight-img {
-            width: 100%;
-            border-radius: 20px;
-            margin-bottom: 14px;
-            background: #F0F4FA;
-            aspect-ratio: 16 / 9;
-            object-fit: cover;
+        .teacher-flex{
+            display:flex;
+            flex-direction:column;
+            gap:16px;
         }
-        .outline-buttons {
-            display: flex;
-            gap: 12px;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin: 20px 0;
+        .qrcode-area{
+            background:white;
+            border-radius:24px;
+            padding:20px;
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+            gap:20px;
+            text-align:center;
         }
-        .outline-img-container {
-            display: none;
-            margin-top: 16px;
+        .qrcode-box{
+            text-align:center;
         }
-        .outline-img-container img {
-            width: 100%;
-            border-radius: 24px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        .qrcode-box img{
+            width:110px;
+            height:110px;
+            border-radius:12px;
+            background:#E9EDF2;
+            object-fit:contain;
         }
-        .teacher-flex {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
+        .test-link{
+            background:#FFF7E5;
+            border-radius:20px;
+            padding:16px;
+            margin-top:16px;
         }
-        .qrcode-area {
-            background: white;
-            border-radius: 32px;
-            padding: 24px 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 24px;
-            text-align: center;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+        .outline-buttons{
+            display:flex;
+            flex-direction:column;
+            gap:10px;
+            margin-bottom:16px;
+            align-items:center;
         }
-        .qrcode-box img {
-            width: 120px;
-            height: 120px;
-            border-radius: 20px;
-            background: #E9EDF2;
-            object-fit: contain;
+        .outline-img-container{
+            display:none;
+            margin-top:16px;
+            text-align:center;
         }
-        .test-link {
-            background: #FFF7E5;
-            border-radius: 28px;
-            padding: 20px;
-            margin-top: 20px;
+        .outline-img-container img{
+            max-width:100%;
+            border-radius:16px;
+            box-shadow:0 6px 16px rgba(0,0,0,0.1);
         }
-        .footer-contact {
-            background: #1A2C3E;
-            color: white;
-            padding: 28px 20px;
-            text-align: center;
-            font-size: 0.8rem;
-            border-radius: 28px 28px 0 0;
-            margin-top: 24px;
+        .placeholder-img{
+            background:#E9EDF2;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            color:#8A9BB0;
+            font-size:13px;
+            text-align:center;
+            padding:16px;
+            border-radius:16px;
         }
-        .placeholder-img {
-            background: #E9EDF2;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #8A9BB0;
-            font-size: 13px;
-            padding: 20px;
-            border-radius: 20px;
-            text-align: center;
-            width: 100%;
-            height: 100%;
+        .footer-contact{
+            background:#1A2C3E;
+            color:white;
+            padding:24px 16px;
+            text-align:center;
+            border-radius:24px 24px 0 0;
+            margin-top:16px;
+            font-size:0.8rem;
+            line-height:1.6;
         }
-        @media (min-width: 600px) {
-            .container {
-                padding: 0 24px;
-            }
-            .grid-2col, .grid-3col {
-                display: grid;
-                gap: 24px;
-            }
-            .grid-2col {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            .grid-3col {
-                grid-template-columns: repeat(3, 1fr);
-            }
-            .hero-grid {
-                flex-direction: row;
-                align-items: center;
-            }
-            .teacher-flex {
-                flex-direction: row;
-            }
-            .qrcode-area {
-                flex-direction: row;
-                text-align: left;
-                justify-content: space-between;
-            }
-            .kb-book-show {
-                grid-template-columns: repeat(4, 1fr);
-            }
+        button, a{
+            cursor:pointer;
+            touch-action:manipulation;
         }
-        button, a {
-            cursor: pointer;
+        img{
+            max-width:100%;
+            height:auto;
         }
-        img {
-            max-width: 100%;
-            height: auto;
+        p{
+            line-height:1.6;
+            font-size:0.95rem;
         }
     </style>
     <script>
@@ -356,8 +346,8 @@
 </head>
 <body>
 <div class="navbar">
-    <div class="nav-flex container">
-        <div class="logo"><h1>演说家·KB课程</h1><p>高思英语+ | 剑桥考培</p></div>
+    <div class="container nav-flex">
+        <div class="logo"><h1>演说家·KB课程</h1><p>高思英语+ | 剑桥考培 · 新课标领跑者</p></div>
         <a href="#contact" class="btn-cta-nav">咨询报名</a>
     </div>
 </div>
@@ -374,7 +364,7 @@
             </div>
         </div>
         <div class="main-img">
-            <img src="main.jpg" alt="课堂展示" onerror="this.onerror=null;this.parentElement.innerHTML='<div class=\'placeholder-img\' style=\'min-height:180px;\'>📷 请放 main.jpg</div>'">
+            <img src="main.jpg" alt="课堂/教材展示" onerror="this.onerror=null;this.parentElement.innerHTML='<div class=\'placeholder-img\' style=\'min-height:160px;\'>📷 请将 main.jpg 放在同文件夹</div>'">
         </div>
     </div>
 </div>
@@ -382,7 +372,7 @@
 <div class="container">
     <section id="core">
         <div class="section-title">高思英语+ 理念</div>
-        <div class="section-sub">核心教育理念 · 幼小衔接 · 剑桥互补</div>
+        <div class="section-sub">核心教育理念 · 幼小衔接目标 · 与剑桥互补赋能</div>
         <div class="grid-2col">
             <div class="card"><i class="fa-regular fa-compass" style="font-size:1.6rem;color:#1E6DFF;"></i><h3>全人教育 · 全面发展</h3><p>专为北京1-2年级打造“听说读写”四位一体，平滑衔接升学需求。</p></div>
             <div class="card"><i class="fa-regular fa-handshake" style="font-size:1.6rem;color:#F97316;"></i><h3>剑桥互补 · 双优赋能</h3><p>对接YLE/KET能力要求，同时贴合新课标，校内校外双优提升。</p></div>
@@ -413,48 +403,57 @@
         <div class="section-sub">官方体系扎实进阶，高思补充拓展提升</div>
         <div class="kb-book-show">
             <div class="book-card">
-                <div class="book-cover"><img src="kb_starter.jpg" alt="Starter" onerror="this.parentElement.innerHTML='<div class=\'placeholder-img\'>📘</div>'"></div>
+                <div class="book-cover"><img src="kb_starter.jpg" alt="Kid's Box Starter" onerror="this.parentElement.innerHTML='<div class=\'placeholder-img\'>📘 kb_starter.jpg</div>'"></div>
                 <strong>Kid's Box Starter</strong>
                 <p>大班K3 · 剑桥预备级</p>
             </div>
             <div class="book-card">
-                <div class="book-cover"><img src="kb_1_2.jpg" alt="KB1-2" onerror="this.parentElement.innerHTML='<div class=\'placeholder-img\'>📘</div>'"></div>
-                <strong>Kid's Box 1&2</strong>
+                <div class="book-cover"><img src="kb_1_2.jpg" alt="Kid's Box 1&2" onerror="this.parentElement.innerHTML='<div class=\'placeholder-img\'>📘 kb_1_2.jpg</div>'"></div>
+                <strong>Kid's Box 1 & 2</strong>
                 <p>一年级 · 剑少一级</p>
             </div>
             <div class="book-card">
-                <div class="book-cover"><img src="kb_3_4.jpg" alt="KB3-4" onerror="this.parentElement.innerHTML='<div class=\'placeholder-img\'>📘</div>'"></div>
-                <strong>Kid's Box 3&4</strong>
+                <div class="book-cover"><img src="kb_3_4.jpg" alt="Kid's Box 3&4" onerror="this.parentElement.innerHTML='<div class=\'placeholder-img\'>📘 kb_3_4.jpg</div>'"></div>
+                <strong>Kid's Box 3 & 4</strong>
                 <p>二年级 · 剑少二级衔接</p>
             </div>
             <div class="book-card">
-                <strong>📚 高思补充</strong>
+                <div style="font-weight:700; margin-bottom:10px;">📚 高思补充教材</div>
                 <div class="gaosi-books">
-                    <div class="gaosi-item"><div class="book-cover"><img src="gaosi1.jpg" alt="补1" onerror="this.innerHTML='📖'"></div><span>阅读强化</span></div>
-                    <div class="gaosi-item"><div class="book-cover"><img src="gaosi2.jpg" alt="补2" onerror="this.innerHTML='📖'"></div><span>语法闯关</span></div>
-                    <div class="gaosi-item"><div class="book-cover"><img src="gaosi3.jpg" alt="补3" onerror="this.innerHTML='📖'"></div><span>口语特训</span></div>
+                    <div class="gaosi-item">
+                        <div class="book-cover" style="height:90px;"><img src="gaosi1.jpg" alt="高思补充1" onerror="this.parentElement.innerHTML='<div class=\'placeholder-img\'>📖1</div>'"></div>
+                        <span style="font-size:12px;">阅读强化</span>
+                    </div>
+                    <div class="gaosi-item">
+                        <div class="book-cover" style="height:90px;"><img src="gaosi2.jpg" alt="高思补充2" onerror="this.parentElement.innerHTML='<div class=\'placeholder-img\'>📖2</div>'"></div>
+                        <span style="font-size:12px;">语法闯关</span>
+                    </div>
+                    <div class="gaosi-item">
+                        <div class="book-cover" style="height:90px;"><img src="gaosi3.jpg" alt="高思补充3" onerror="this.parentElement.innerHTML='<div class=\'placeholder-img\'>📖3</div>'"></div>
+                        <span style="font-size:12px;">口语特训</span>
+                    </div>
                 </div>
-                <p style="font-size:12px; margin-top:6px;">校内校外双优拓展</p>
+                <p style="margin-top:8px; font-size:12px;">校内校外双优拓展</p>
             </div>
         </div>
     </section>
 
     <section id="highlights">
-        <div class="section-title">课程亮点 · 新课标+剑桥双核</div>
+        <div class="section-title">课程亮点 · 新课标导向+剑桥双核</div>
         <div class="section-sub">沉浸式课堂 | 四大核心素养</div>
         <div class="grid-3col">
             <div class="card">
-                <img class="highlight-img" src="highlight1.jpg" alt="语言能力" onerror="this.src='data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22200%22%20height%3D%22120%22%20viewBox%3D%220%200%20200%20120%22%3E%3Crect%20width%3D%22200%22%20height%3D%22120%22%20fill%3D%22%23EFF3FA%22%2F%3E%3Ctext%20x%3D%2250%22%20y%3D%2260%22%20fill%3D%22%236B8EC7%22%3Ehighlight1.jpg%3C%2Ftext%3E%3C%2Fsvg%3E';">
+                <div style="margin-bottom:12px;"><img src="highlight1.jpg" alt="语言能力+文化意识" style="width:100%; border-radius:18px;" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22200%22%20height%3D%22120%22%20viewBox%3D%220%200%20200%20120%22%3E%3Crect%20width%3D%22200%22%20height%3D%22120%22%20fill%3D%22%23EFF3FA%22%2F%3E%3Ctext%20x%3D%2250%22%20y%3D%2260%22%20fill%3D%22%236B8EC7%22%3Ehighlight1.jpg%3C%2Ftext%3E%3C%2Fsvg%3E';"></div>
                 <h3>语言能力+文化意识</h3>
                 <p>三大主题语境：人与自我/社会/自然，开拓国际视野。</p>
             </div>
             <div class="card">
-                <img class="highlight-img" src="highlight2.jpg" alt="思维品质" onerror="this.src='data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22200%22%20height%3D%22120%22%20viewBox%3D%220%200%20200%20120%22%3E%3Crect%20width%3D%22200%22%20height%3D%22120%22%20fill%3D%22%23EFF3FA%22%2F%3E%3Ctext%20x%3D%2250%22%20y%3D%2260%22%20fill%3D%22%236B8EC7%22%3Ehighlight2.jpg%3C%2Ftext%3E%3C%2Fsvg%3E';">
+                <div style="margin-bottom:12px;"><img src="highlight2.jpg" alt="思维品质+学习能力" style="width:100%; border-radius:18px;" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22200%22%20height%3D%22120%22%20viewBox%3D%220%200%20200%20120%22%3E%3Crect%20width%3D%22200%22%20height%3D%22120%22%20fill%3D%22%23EFF3FA%22%2F%3E%3Ctext%20x%3D%2250%22%20y%3D%2260%22%20fill%3D%22%236B8EC7%22%3Ehighlight2.jpg%3C%2Ftext%3E%3C%2Fsvg%3E';"></div>
                 <h3>思维品质+学习能力</h3>
                 <p>项目式学习，培养逻辑思维与自主学习策略。</p>
             </div>
             <div class="card">
-                <img class="highlight-img" src="highlight3.jpg" alt="互动课堂" onerror="this.src='data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22200%22%20height%3D%22120%22%20viewBox%3D%220%200%20200%20120%22%3E%3Crect%20width%3D%22200%22%20height%3D%22120%22%20fill%3D%22%23EFF3FA%22%2F%3E%3Ctext%20x%3D%2250%22%20y%3D%2260%22%20fill%3D%22%236B8EC7%22%3Ehighlight3.jpg%3C%2Ftext%3E%3C%2Fsvg%3E';">
+                <div style="margin-bottom:12px;"><img src="highlight3.jpg" alt="沉浸式互动课堂" style="width:100%; border-radius:18px;" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22200%22%20height%3D%22120%22%20viewBox%3D%220%200%20200%20120%22%3E%3Crect%20width%3D%22200%22%20height%3D%22120%22%20fill%3D%22%23EFF3FA%22%2F%3E%3Ctext%20x%3D%2250%22%20y%3D%2260%22%20fill%3D%22%236B8EC7%22%3Ehighlight3.jpg%3C%2Ftext%3E%3C%2Fsvg%3E';"></div>
                 <h3>沉浸式互动课堂</h3>
                 <p>全英授课+情境演绎，低年级以听说为核心，符合新课标学段目标。</p>
             </div>
@@ -464,7 +463,7 @@
 
     <section id="courseinfo">
         <div class="section-title">2026暑秋课程 · 完整大纲</div>
-        <div class="section-sub">点击下方按钮查看对应年级暑秋详细大纲</div>
+        <div class="section-sub">点击下方按钮，查看对应年级的暑秋详细大纲图片</div>
         <div class="grid-2col">
             <div class="card">
                 <h3><i class="fa-regular fa-calendar"></i> 课程形式 & 时间</h3>
@@ -473,40 +472,40 @@
                 <div class="test-link" style="margin-top:20px; background:#F0F7FF;">
                     <i class="fa-regular fa-pen-to-square"></i> <strong>学情评估推荐</strong><br>
                     <a href="#" class="btn-primary" style="margin-top:12px;">G1 评估预约</a>
-                    <a href="#" class="btn-primary" style="background:#F97316; margin-left:10px;">G2 评估预约</a>
+                    <a href="#" class="btn-primary" style="background:#F97316; margin-top:10px;">G2 评估预约</a>
                 </div>
             </div>
             <div class="card">
                 <h3><i class="fa-regular fa-image"></i> 暑秋完整大纲</h3>
                 <div class="outline-buttons">
-                    <button class="btn-secondary" onclick="showOutline('K3')">📘 大班(K3)</button>
+                    <button class="btn-secondary" onclick="showOutline('K3')">📘 大班 (K3)</button>
                     <button class="btn-secondary" onclick="showOutline('G1')">📗 一年级</button>
                     <button class="btn-secondary" onclick="showOutline('G2')">📙 二年级</button>
                 </div>
                 <div id="outline-K3" class="outline-img-container">
-                    <img src="outline_K3.jpg" alt="大班大纲" onerror="this.parentElement.innerHTML='<div class=\'placeholder-img\'>📷 请放 outline_K3.jpg</div>'">
+                    <img src="outline_K3.jpg" alt="大班K3暑秋大纲" onerror="this.parentElement.innerHTML='<div class=\'placeholder-img\'>📷 请将 outline_K3.jpg 放在同文件夹</div>'">
                 </div>
                 <div id="outline-G1" class="outline-img-container">
-                    <img src="outline_G1.jpg" alt="一年级大纲" onerror="this.parentElement.innerHTML='<div class=\'placeholder-img\'>📷 请放 outline_G1.jpg</div>'">
+                    <img src="outline_G1.jpg" alt="一年级暑秋大纲" onerror="this.parentElement.innerHTML='<div class=\'placeholder-img\'>📷 请将 outline_G1.jpg 放在同文件夹</div>'">
                 </div>
                 <div id="outline-G2" class="outline-img-container">
-                    <img src="outline_G2.jpg" alt="二年级大纲" onerror="this.parentElement.innerHTML='<div class=\'placeholder-img\'>📷 请放 outline_G2.jpg</div>'">
+                    <img src="outline_G2.jpg" alt="二年级暑秋大纲" onerror="this.parentElement.innerHTML='<div class=\'placeholder-img\'>📷 请将 outline_G2.jpg 放在同文件夹</div>'">
                 </div>
-                <p style="margin-top:16px; font-size:0.8rem;"><i class="fa-regular fa-lightbulb"></i> 建议先预约学情评估，选择最适合的班型。</p>
+                <p style="margin-top:16px; font-size:0.85rem;"><i class="fa-regular fa-lightbulb"></i> 建议先预约学情评估，选择最适合的班型。</p>
             </div>
         </div>
     </section>
 
     <section id="teachers">
         <div class="section-title">卓越师资 · 硬核教研</div>
-        <div class="section-sub">名校毕业+严选培训，录取率低于5%</div>
+        <div class="section-sub">名校毕业+严选培训</div>
         <div class="teacher-flex">
-            <div class="card"><h3><i class="fa-regular fa-user-graduate"></i> 师资介绍</h3><p>80%教师持英语专八/TKT证书，剑桥口语考官经验，平均教龄5年+。</p></div>
-            <div class="card"><h3><i class="fa-regular fa-list-check"></i> 选拔流程</h3><p>简历筛选→10轮磨课→岗前培训，录取率低于5%。</p></div>
-            <div class="card"><h3><i class="fa-regular fa-pen-ruler"></i> 产品设计亮点</h3><p>游戏化测评+AI语音反馈+演说家积分激励。</p></div>
+            <div class="card" style="flex:1;"><h3><i class="fa-regular fa-user-graduate"></i> 师资介绍</h3><p>80%教师持英语专八/TKT证书，剑桥口语考官经验，平均教龄5年+。</p></div>
+            <div class="card" style="flex:1;"><h3><i class="fa-regular fa-list-check"></i> 选拔流程</h3><p>简历筛选→10轮磨课→岗前培训，录取率低于5%。</p></div>
+            <div class="card" style="flex:1;"><h3><i class="fa-regular fa-pen-ruler"></i> 产品设计亮点</h3><p>游戏化测评+AI语音反馈+演说家积分激励。</p></div>
         </div>
-        <div style="margin-top:24px; text-align:center;">
-            <img src="teachers.jpg" alt="教研团队合影" style="max-width:100%; border-radius:28px;" onerror="this.onerror=null;this.parentElement.innerHTML='<div class=\'placeholder-img\' style=\'padding:30px;\'>👥 团队合影可放 teachers.jpg</div>'">
+        <div style="margin-top:24px;text-align:center;">
+            <img src="teachers.jpg" alt="教研团队合影" style="max-width:100%;border-radius:28px;" onerror="this.onerror=null;this.parentElement.innerHTML='<div class=\'placeholder-img\' style=\'padding:30px;\'>👥 团队合影可放 teachers.jpg</div>'">
         </div>
     </section>
 
@@ -522,7 +521,7 @@
                 <p><i class="fa-regular fa-phone"></i> 课程专线：400-668-XXXX</p>
                 <p><i class="fa-regular fa-message"></i> 王老师 / 刘老师 在线答疑</p>
                 <a href="#" class="btn-primary" style="margin-top:12px;display:inline-block;">课程报名链接</a>
-                <a href="#" class="btn-secondary" style="margin-left:12px;">1v1咨询</a>
+                <a href="#" class="btn-secondary" style="margin-top:10px;">1v1咨询</a>
             </div>
         </div>
     </section>
