@@ -3,457 +3,542 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
-    <title>演说家KB课程 | 北京一二年级英语招生</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>高思英语·KB课程介绍 | 北京大班-二年级英语培优</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <style>
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-            -webkit-tap-highlight-color:transparent;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
         }
-        body{
-            font-family:'Inter',sans-serif;
-            background:#F8FAFE;
-            color:#1A2C3E;
-            line-height:1.6;
-            overflow-x:hidden;
-            font-size:16px;
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: #F8FAFE;
+            color: #1F2A3E;
+            line-height: 1.45;
+            overflow-x: hidden;
         }
-        .container{
-            width:100%;
-            max-width:100%;
-            margin:0 auto;
-            padding:0 14px;
+        .container {
+            width: 100%;
+            max-width: 100%;
+            padding: 0 16px;
+            margin: 0 auto;
         }
-        .navbar{
-            background:rgba(255,255,255,0.98);
-            backdrop-filter:blur(2px);
-            position:sticky;
-            top:0;
-            z-index:100;
-            box-shadow:0 1px 3px rgba(0,0,0,0.08);
-            padding:10px 0;
+        /* 导航栏 */
+        .navbar {
+            background: rgba(255,255,255,0.96);
+            backdrop-filter: blur(8px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 12px 16px;
+            border-bottom: 1px solid #eef2f6;
         }
-        .nav-flex{
-            display:flex;
-            justify-content:space-between;
-            align-items:center;
-            flex-wrap:wrap;
+        .nav-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
-        .logo h1{
-            font-size:1.25rem;
-            font-weight:800;
-            background:linear-gradient(135deg,#1E6DFF,#C046FF);
-            -webkit-background-clip:text;
-            background-clip:text;
-            color:transparent;
+        .logo h1 {
+            font-size: 1.4rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #1E6DFF, #C046FF);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            letter-spacing: -0.3px;
         }
-        .logo p{
-            font-size:0.65rem;
-            color:#F97316;
-            font-weight:500;
+        .logo p {
+            font-size: 0.7rem;
+            color: #F97316;
+            font-weight: 600;
         }
-        .btn-cta-nav{
-            background:#F97316;
-            color:white;
-            padding:8px 14px;
-            border-radius:40px;
-            text-decoration:none;
-            font-weight:600;
-            font-size:0.8rem;
-            white-space:nowrap;
+        .btn-cta-nav {
+            background: #F97316;
+            color: white;
+            padding: 8px 18px;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.85rem;
+            box-shadow: 0 2px 6px rgba(249,115,22,0.2);
         }
-        section{
-            padding:30px 0;
-            border-bottom:1px solid rgba(0,0,0,0.04);
+        section {
+            padding: 48px 0;
+            border-bottom: 1px solid #eef2f6;
         }
-        .section-title{
-            font-size:1.5rem;
-            font-weight:700;
-            margin-bottom:10px;
-            background:linear-gradient(120deg,#1E2F4F,#1E6DFF);
-            background-clip:text;
-            -webkit-background-clip:text;
-            color:transparent;
-            word-break:break-word;
-            line-height:1.3;
+        .section-title {
+            font-size: 1.7rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            background: linear-gradient(120deg, #1E2F4F, #1E6DFF);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            line-height: 1.2;
         }
-        .section-sub{
-            color:#5A6E84;
-            margin-bottom:20px;
-            font-size:0.95rem;
-            border-left:3px solid #F97316;
-            padding-left:12px;
-            line-height:1.5;
+        .section-sub {
+            color: #5A6E84;
+            margin-bottom: 28px;
+            font-size: 0.95rem;
+            border-left: 4px solid #F97316;
+            padding-left: 14px;
         }
-        .grid-2col, .grid-3col{
-            display:grid;
-            gap:16px;
-            grid-template-columns:1fr;
+        .card {
+            background: white;
+            border-radius: 28px;
+            padding: 22px 20px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.04);
+            border: 1px solid rgba(0,0,0,0.03);
+            margin-bottom: 20px;
         }
-        .card{
-            background:white;
-            border-radius:20px;
-            padding:20px 16px;
-            box-shadow:0 8px 20px rgba(0,0,0,0.05);
-            transition:0.25s;
-            border:1px solid rgba(0,0,0,0.03);
+        .grid-2col, .grid-3col {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
         }
-        .badge{
-            display:inline-block;
-            background:#FFF1E6;
-            color:#F97316;
-            font-weight:600;
-            font-size:0.75rem;
-            padding:4px 10px;
-            border-radius:50px;
-            margin-bottom:12px;
+        @media (min-width: 600px) {
+            .grid-2col {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 24px;
+            }
+            .grid-3col {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 24px;
+            }
         }
-        h3{
-            font-size:1.15rem;
-            margin-bottom:10px;
-            font-weight:600;
-            line-height:1.4;
+        .badge {
+            background: #FFF1E6;
+            color: #F97316;
+            font-weight: 600;
+            font-size: 0.7rem;
+            padding: 4px 12px;
+            border-radius: 40px;
+            display: inline-block;
+            margin-bottom: 14px;
         }
-        .highlight-orange{
-            color:#F97316;
-            font-weight:700;
+        h3 {
+            font-size: 1.35rem;
+            margin-bottom: 12px;
+            font-weight: 700;
         }
-        .level-diagram{
-            background:linear-gradient(145deg,#EFF5FF,white);
-            border-radius:20px;
-            padding:16px;
-            margin-top:16px;
-            font-size:0.9rem;
+        .highlight-orange {
+            color: #F97316;
+            font-weight: 700;
         }
-        .btn-primary{
-            background:#1E6DFF;
-            color:white;
-            padding:12px 20px;
-            border-radius:40px;
-            font-weight:600;
-            text-decoration:none;
-            display:inline-block;
-            box-shadow:0 4px 10px rgba(30,109,255,0.2);
-            transition:0.2s;
-            font-size:0.9rem;
-            text-align:center;
-            width:100%;
-            max-width:280px;
+        .level-diagram {
+            background: linear-gradient(145deg, #EFF5FF, white);
+            border-radius: 28px;
+            padding: 20px;
+            margin-top: 24px;
+            font-size: 0.9rem;
+            border: 1px solid #eef2fa;
         }
-        .btn-secondary{
-            background:white;
-            border:1.5px solid #1E6DFF;
-            color:#1E6DFF;
-            padding:10px 16px;
-            border-radius:40px;
-            font-weight:600;
-            text-decoration:none;
-            display:inline-block;
-            font-size:0.9rem;
-            text-align:center;
-            width:100%;
-            max-width:280px;
+        .btn-primary, .btn-secondary {
+            display: inline-block;
+            padding: 12px 24px;
+            border-radius: 60px;
+            font-weight: 600;
+            text-decoration: none;
+            text-align: center;
+            font-size: 0.9rem;
+            transition: 0.2s;
+            word-break: keep-all;
         }
-        .hero{
-            background:linear-gradient(135deg,#F0F7FF,#E9F0FA);
-            padding:30px 0;
+        .btn-primary {
+            background: #1E6DFF;
+            color: white;
+            box-shadow: 0 4px 10px rgba(30,109,255,0.25);
         }
-        .hero-grid{
-            display:flex;
-            flex-direction:column;
-            gap:24px;
+        .btn-secondary {
+            background: white;
+            border: 1.5px solid #1E6DFF;
+            color: #1E6DFF;
         }
-        .hero-content{
-            flex:1;
+        .btn-group {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 20px;
         }
-        .hero-badge{
-            background:#F97316;
-            color:white;
-            border-radius:40px;
-            padding:4px 12px;
-            display:inline-block;
-            margin-bottom:12px;
-            font-weight:600;
-            font-size:0.75rem;
+        .hero {
+            background: linear-gradient(135deg, #F0F7FF, #E9F0FA);
+            padding: 40px 0;
         }
-        .hero-content h1{
-            font-size:1.8rem;
-            font-weight:800;
-            line-height:1.25;
-            margin-bottom:12px;
+        .hero-content h1 {
+            font-size: 2rem;
+            font-weight: 800;
+            line-height: 1.25;
+            margin-bottom: 14px;
         }
-        .btn-group{
-            display:flex;
-            flex-direction:column;
-            gap:10px;
-            margin-top:16px;
-            align-items:center;
+        .hero-badge {
+            background: #F97316;
+            color: white;
+            border-radius: 40px;
+            padding: 5px 14px;
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-bottom: 16px;
         }
-        .main-img{
-            width:100%;
-            background:#EFF3FA;
-            border-radius:20px;
-            overflow:hidden;
+        /* 教材纵向排列 */
+        .book-row {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            margin: 24px 0;
         }
-        .main-img img{
-            width:100%;
-            height:auto;
-            display:block;
+        .book-item {
+            background: #FFF6E8;
+            border-radius: 28px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
         }
-        .kb-book-show{
-            display:flex;
-            flex-wrap:wrap;
-            gap:12px;
-            justify-content:center;
-            margin:20px 0;
+        @media (min-width: 560px) {
+            .book-item {
+                flex-direction: row;
+                align-items: center;
+            }
         }
-        .book-card{
-            background:#FFF6E8;
-            border-radius:18px;
-            padding:12px;
-            width:calc(50% - 8px);
-            min-width:140px;
-            flex:1 1 auto;
-            text-align:center;
-            box-shadow:0 6px 12px rgba(0,0,0,0.05);
+        .book-cover {
+            width: 120px;
+            height: 160px;
+            background: #FBCF9E;
+            border-radius: 20px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin: 0 auto;
         }
-        .book-cover{
-            width:100%;
-            height:130px;
-            border-radius:16px;
-            overflow:hidden;
-            margin-bottom:10px;
-            background:#FBCF9E;
-            display:flex;
-            align-items:center;
-            justify-content:center;
+        @media (min-width: 560px) {
+            .book-cover {
+                margin: 0;
+            }
         }
-        .book-cover img{
-            width:100%;
-            height:100%;
-            object-fit:cover;
+        .book-cover img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
-        .gaosi-books{
-            display:flex;
-            gap:8px;
-            justify-content:center;
-            flex-wrap:wrap;
-            margin-top:8px;
+        .book-info {
+            flex: 1;
         }
-        .gaosi-item{
-            width:60px;
-            text-align:center;
+        .book-info h4 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 8px;
         }
-        .gaosi-item .book-cover{
-            height:80px;
-            margin-bottom:6px;
+        .book-info p {
+            font-size: 0.85rem;
+            color: #4A5B6E;
+            margin-top: 6px;
         }
-        .teacher-flex{
-            display:flex;
-            flex-direction:column;
-            gap:16px;
+        .gaosi-row {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-top: 16px;
         }
-        .qrcode-area{
-            background:white;
-            border-radius:24px;
-            padding:20px;
-            display:flex;
-            flex-direction:column;
-            align-items:center;
-            gap:20px;
-            text-align:center;
+        .gaosi-card {
+            background: #F2F6FC;
+            border-radius: 24px;
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
         }
-        .qrcode-box{
-            text-align:center;
+        @media (min-width: 600px) {
+            .gaosi-row {
+                flex-direction: row;
+            }
+            .gaosi-card {
+                flex: 1;
+            }
         }
-        .qrcode-box img{
-            width:110px;
-            height:110px;
-            border-radius:12px;
-            background:#E9EDF2;
-            object-fit:contain;
+        .gaosi-cover {
+            width: 100px;
+            height: 130px;
+            background: #E0EAFA;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 12px;
         }
-        .test-link{
-            background:#FFF7E5;
-            border-radius:20px;
-            padding:16px;
-            margin-top:16px;
+        .gaosi-cover img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 16px;
         }
-        .outline-buttons{
-            display:flex;
-            flex-direction:column;
-            gap:10px;
-            margin-bottom:16px;
-            align-items:center;
+        .outline-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: center;
+            margin: 20px 0;
         }
-        .outline-img-container{
-            display:none;
-            margin-top:16px;
-            text-align:center;
+        .outline-img-container {
+            display: none;
+            margin-top: 16px;
         }
-        .outline-img-container img{
-            max-width:100%;
-            border-radius:16px;
-            box-shadow:0 6px 16px rgba(0,0,0,0.1);
+        .outline-img-container img {
+            width: 100%;
+            border-radius: 24px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
         }
-        .placeholder-img{
-            background:#E9EDF2;
-            display:flex;
-            align-items:center;
-            justify-content:center;
-            color:#8A9BB0;
-            font-size:13px;
-            text-align:center;
-            padding:16px;
-            border-radius:16px;
+        .teacher-flex {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
         }
-        .footer-contact{
-            background:#1A2C3E;
-            color:white;
-            padding:24px 16px;
-            text-align:center;
-            border-radius:24px 24px 0 0;
-            margin-top:16px;
-            font-size:0.8rem;
-            line-height:1.6;
+        @media (min-width: 600px) {
+            .teacher-flex {
+                flex-direction: row;
+            }
         }
-        button, a{
-            cursor:pointer;
-            touch-action:manipulation;
+        .qrcode-area {
+            background: white;
+            border-radius: 32px;
+            padding: 24px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 24px;
+            text-align: center;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
         }
-        img{
-            max-width:100%;
-            height:auto;
+        @media (min-width: 600px) {
+            .qrcode-area {
+                flex-direction: row;
+                justify-content: space-between;
+                text-align: left;
+            }
         }
-        p{
-            line-height:1.6;
-            font-size:0.95rem;
+        .qrcode-box img {
+            width: 120px;
+            height: 120px;
+            border-radius: 20px;
+            background: #E9EDF2;
+            object-fit: contain;
+        }
+        .test-link {
+            background: #FFF7E5;
+            border-radius: 28px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        .footer-contact {
+            background: #1A2C3E;
+            color: white;
+            padding: 28px 20px;
+            text-align: center;
+            font-size: 0.8rem;
+            border-radius: 28px 28px 0 0;
+            margin-top: 24px;
+        }
+        .placeholder-img {
+            background: #E9EDF2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #8A9BB0;
+            font-size: 13px;
+            padding: 20px;
+            border-radius: 20px;
+            text-align: center;
+            width: 100%;
+            height: 100%;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        button {
+            background: none;
+            border: none;
         }
     </style>
     <script>
-        function showOutline(grade) {
-            document.getElementById('outline-K3').style.display = 'none';
-            document.getElementById('outline-G1').style.display = 'none';
-            document.getElementById('outline-G2').style.display = 'none';
-            if(grade === 'K3') document.getElementById('outline-K3').style.display = 'block';
-            if(grade === 'G1') document.getElementById('outline-G1').style.display = 'block';
-            if(grade === 'G2') document.getElementById('outline-G2').style.display = 'block';
+        function showOutline(grade, season) {
+            // 隐藏所有大纲图片
+            const ids = ['K3_summer', 'K3_autumn', 'G1_summer', 'G1_autumn', 'G2_summer', 'G2_autumn'];
+            ids.forEach(id => {
+                document.getElementById(id).style.display = 'none';
+            });
+            // 显示对应的
+            const targetId = grade + '_' + season;
+            const el = document.getElementById(targetId);
+            if (el) el.style.display = 'block';
         }
     </script>
 </head>
 <body>
 <div class="navbar">
-    <div class="container nav-flex">
-        <div class="logo"><h1>演说家·KB课程</h1><p>高思英语+ | 剑桥考培 · 新课标领跑者</p></div>
+    <div class="nav-flex container">
+        <div class="logo"><h1>高思英语·KB课程介绍</h1><p>互动式教学 | 兴趣&考级两不误</p></div>
         <a href="#contact" class="btn-cta-nav">咨询报名</a>
     </div>
 </div>
 
 <div class="hero">
-    <div class="container hero-grid">
+    <div class="container">
         <div class="hero-content">
-            <div class="hero-badge"><i class="fa-regular fa-star"></i> 2026暑秋热招 · 一二年级专属</div>
-            <h1>演说家KB少儿英语<br>剑桥体系<span class="highlight-orange"> + 新课标双核驱动</span></h1>
-            <p>专为北京1-2年级设计 | 无缝衔接YLE/KET | 沉浸式互动课堂</p>
+            <div class="hero-badge"><i class="fa-regular fa-star"></i> 2026暑秋KB产品介绍</div>
+            <h1>高思演说家·Kid's Box体系<br><span class="highlight-orange">剑桥体系 + 互动教学</span>双核驱动</h1>
+            <p>专为北京大班-2年级设计 | 无缝衔接YLE/KET | 沉浸式互动课堂</p>
             <div class="btn-group">
                 <a href="#courseinfo" class="btn-primary">查看暑秋课表</a>
                 <a href="#contact" class="btn-secondary">预约学情评估</a>
             </div>
         </div>
-        <div class="main-img">
-            <img src="main.jpg" alt="课堂/教材展示" onerror="this.onerror=null;this.parentElement.innerHTML='<div class=\'placeholder-img\' style=\'min-height:160px;\'>📷 请将 main.jpg 放在同文件夹</div>'">
-        </div>
     </div>
 </div>
 
 <div class="container">
+    <!-- 高思英语KB理念：三个板块 -->
     <section id="core">
-        <div class="section-title">高思英语+ 理念</div>
-        <div class="section-sub">核心教育理念 · 幼小衔接目标 · 与剑桥互补赋能</div>
+        <div class="section-title">高思英语KB理念</div>
         <div class="grid-2col">
-            <div class="card"><i class="fa-regular fa-compass" style="font-size:1.6rem;color:#1E6DFF;"></i><h3>全人教育 · 全面发展</h3><p>专为北京1-2年级打造“听说读写”四位一体，平滑衔接升学需求。</p></div>
-            <div class="card"><i class="fa-regular fa-handshake" style="font-size:1.6rem;color:#F97316;"></i><h3>剑桥互补 · 双优赋能</h3><p>对接YLE/KET能力要求，同时贴合新课标，校内校外双优提升。</p></div>
+            <div class="card">
+                <i class="fa-regular fa-lightbulb" style="font-size:1.8rem;color:#1E6DFF;"></i>
+                <h3>核心教育理念</h3>
+                <p>以兴趣为起点，互动式教学激发潜能，听说读写全面发展，培养语言综合素养。</p>
+            </div>
+            <div class="card">
+                <i class="fa-regular fa-child" style="font-size:1.8rem;color:#F97316;"></i>
+                <h3>幼小衔接目标</h3>
+                <p>帮助大班孩子平稳过渡到一年级，建立英语学习习惯，具备基础日常交流能力。</p>
+            </div>
+            <div class="card">
+                <i class="fa-regular fa-handshake" style="font-size:1.8rem;color:#1E6DFF;"></i>
+                <h3>与剑桥互补赋能</h3>
+                <p>结合剑桥YLE考级要求，既提升校内成绩，又为国际认证打好基础，双轨并进。</p>
+            </div>
         </div>
     </section>
 
+    <!-- 剑桥介绍 将“直通名校”改为“能力评估标杆”并扩充内容 -->
     <section id="cambridge">
         <div class="section-title">剑桥英语体系 · 权威领航</div>
         <div class="section-sub">YLE / KET 科学分级，全球信赖</div>
         <div class="grid-3col">
             <div class="card"><span class="badge">权威认证</span><h3>高权威性</h3><p>剑桥大学考评部研发，国际认可，为升学提供有力背书。</p></div>
             <div class="card"><span class="badge">科学分级</span><h3>水平细分</h3><p>Pre A1 Starters → A1 Movers → A2 Flyers，循序渐进。</p></div>
-            <div class="card"><span class="badge">衔接性强</span><h3>直通名校</h3><p>夯实基础，从容应对小升初及未来国际教育路径。</p></div>
+            <div class="card"><span class="badge">能力评估标杆</span><h3>能力评估标杆</h3><p>YLE/KET作为中小学英语能力权威测评标准，精准衡量孩子听、说、读、写真实水平，帮助家长清晰定位学习进度，为小升初及未来留学提供可信凭证。</p></div>
         </div>
     </section>
 
+    <!-- 课程体系：重点介绍大班、一年级、二年级，衔接冲刺简单写 -->
     <section id="system">
-        <div class="section-title">课程体系 · 直通剑桥</div>
-        <div class="section-sub">分级分段 · 连贯进阶</div>
-        <div class="grid-2col">
-            <div class="card"><h3>📚 启蒙阶段 (K-G1)</h3><p>自然拼读+日常用语，对应<strong class="highlight-orange">剑桥Starters预备级</strong>，培养语音与学习习惯。</p><hr style="margin:12px 0"><h3>🎯 G1-G2 基础阶段</h3><p>强化读写，覆盖YLE Starters/Movers核心，为剑少打好根基。</p></div>
-            <div class="card"><h3>📖 衔接冲刺 (G3起)</h3><p>高阶对接<strong>KET</strong>考试，螺旋上升，实现无痛进阶。</p><div class="level-diagram" style="margin-top:12px;padding:16px;">连贯性：每学期对标剑桥测评模块，学有所成。</div></div>
+        <div class="section-title">课程体系 · 对标剑桥</div>
+        <div class="section-sub">每个年级精准匹配，稳步进阶</div>
+        <div class="card">
+            <h3>🏆 大班 (K3) · 幼小衔接</h3>
+            <p><strong>教材：</strong>KB0 (Kid's Box Starter)  <br>
+            <strong>重点目标：</strong> 培养英语学习兴趣，掌握基础词汇与日常对话，自然拼读启蒙，无缝衔接一年级。<br>
+            <strong>能力收获：</strong> 能听懂简单指令，进行自我介绍，认读26个字母及基础单词。</p>
+        </div>
+        <div class="card">
+            <h3>📗 一年级 · YLE一级能力</h3>
+            <p><strong>教材：</strong>KB1 & KB2  <br>
+            <strong>重点目标：</strong> 听说读写全面启动，达到剑桥Starters水平，能够描述家庭、学校等话题。<br>
+            <strong>能力收获：</strong> 掌握约400个词汇，能进行简单对话，阅读短故事，书写简单句子。</p>
+        </div>
+        <div class="card">
+            <h3>📘 二年级 · YLE二级能力</h3>
+            <p><strong>教材：</strong>KB3 & KB4  <br>
+            <strong>重点目标：</strong> 强化读写能力，冲刺Movers，具备自主表达与简单逻辑叙述。<br>
+            <strong>能力收获：</strong> 词汇量扩充至800+，能描述事件、表达观点，为KET预备。</p>
+        </div>
+        <div class="card" style="background:#F0F7FF;">
+            <h3>🚀 衔接冲刺 (G3起)</h3>
+            <p>高阶对接KET/FCE考试，稳步实现学术英语与升学优势。</p>
         </div>
     </section>
 
+    <!-- KB教材板块：三个官方教材竖排一行，高思补充横向一行 -->
     <section id="kb">
         <div class="section-title">KB官方原版教材 + 高思补充</div>
-        <div class="section-sub">官方体系扎实进阶，高思补充拓展提升</div>
-        <div class="kb-book-show">
-            <div class="book-card">
-                <div class="book-cover"><img src="kb_starter.jpg" alt="Kid's Box Starter" onerror="this.parentElement.innerHTML='<div class=\'placeholder-img\'>📘 kb_starter.jpg</div>'"></div>
-                <strong>Kid's Box Starter</strong>
-                <p>大班K3 · 剑桥预备级</p>
-            </div>
-            <div class="book-card">
-                <div class="book-cover"><img src="kb_1_2.jpg" alt="Kid's Box 1&2" onerror="this.parentElement.innerHTML='<div class=\'placeholder-img\'>📘 kb_1_2.jpg</div>'"></div>
-                <strong>Kid's Box 1 & 2</strong>
-                <p>一年级 · 剑少一级</p>
-            </div>
-            <div class="book-card">
-                <div class="book-cover"><img src="kb_3_4.jpg" alt="Kid's Box 3&4" onerror="this.parentElement.innerHTML='<div class=\'placeholder-img\'>📘 kb_3_4.jpg</div>'"></div>
-                <strong>Kid's Box 3 & 4</strong>
-                <p>二年级 · 剑少二级衔接</p>
-            </div>
-            <div class="book-card">
-                <div style="font-weight:700; margin-bottom:10px;">📚 高思补充教材</div>
-                <div class="gaosi-books">
-                    <div class="gaosi-item">
-                        <div class="book-cover" style="height:90px;"><img src="gaosi1.jpg" alt="高思补充1" onerror="this.parentElement.innerHTML='<div class=\'placeholder-img\'>📖1</div>'"></div>
-                        <span style="font-size:12px;">阅读强化</span>
-                    </div>
-                    <div class="gaosi-item">
-                        <div class="book-cover" style="height:90px;"><img src="gaosi2.jpg" alt="高思补充2" onerror="this.parentElement.innerHTML='<div class=\'placeholder-img\'>📖2</div>'"></div>
-                        <span style="font-size:12px;">语法闯关</span>
-                    </div>
-                    <div class="gaosi-item">
-                        <div class="book-cover" style="height:90px;"><img src="gaosi3.jpg" alt="高思补充3" onerror="this.parentElement.innerHTML='<div class=\'placeholder-img\'>📖3</div>'"></div>
-                        <span style="font-size:12px;">口语特训</span>
-                    </div>
+        <div class="section-sub">教材特点与收获说明</div>
+        <div class="book-row">
+            <!-- 大班 -->
+            <div class="book-item">
+                <div class="book-cover"><img src="kb_starter.jpg" alt="KB0" onerror="this.parentElement.innerHTML='<div class=\'placeholder-img\'>📘</div>'"></div>
+                <div class="book-info">
+                    <h4>大班 · Kid's Box Starter</h4>
+                    <p><strong>教材特点：</strong> 全彩绘本，歌曲+故事+游戏，零基础友好，自然拼读入门。</p>
+                    <p><strong>收获点：</strong> 建立英语好感度，掌握150+词汇，能进行简单自我介绍和课堂指令回应。</p>
                 </div>
-                <p style="margin-top:8px; font-size:12px;">校内校外双优拓展</p>
+            </div>
+            <!-- 一年级 -->
+            <div class="book-item">
+                <div class="book-cover"><img src="kb_1_2.jpg" alt="KB1-2" onerror="this.parentElement.innerHTML='<div class=\'placeholder-img\'>📘</div>'"></div>
+                <div class="book-info">
+                    <h4>一年级 · Kid's Box 1 & 2</h4>
+                    <p><strong>教材特点：</strong> 情景式单元教学，融入跨学科知识，大量听说活动。</p>
+                    <p><strong>收获点：</strong> 达到YLE Starters水平，词汇400+，能描述家庭、玩具、动物等，读写基础巩固。</p>
+                </div>
+            </div>
+            <!-- 二年级 -->
+            <div class="book-item">
+                <div class="book-cover"><img src="kb_3_4.jpg" alt="KB3-4" onerror="this.parentElement.innerHTML='<div class=\'placeholder-img\'>📘</div>'"></div>
+                <div class="book-info">
+                    <h4>二年级 · Kid's Box 3 & 4</h4>
+                    <p><strong>教材特点：</strong> 故事更长，语法点增多，开始培养阅读策略和简单写作。</p>
+                    <p><strong>收获点：</strong> 冲刺YLE Movers，词汇800+，能讲述简单故事，写短段落，具备日常对话自信。</p>
+                </div>
+            </div>
+        </div>
+        <!-- 高思补充教材横排三个 -->
+        <div style="margin-top: 20px;">
+            <h4 style="margin-bottom: 16px;">📚 高思补充教材（同步强化）</h4>
+            <div class="gaosi-row">
+                <div class="gaosi-card">
+                    <div class="gaosi-cover"><img src="gaosi1.jpg" alt="阅读强化" onerror="this.innerHTML='📖'"></div>
+                    <strong>阅读强化</strong>
+                    <p style="font-size: 12px; margin-top: 6px;">每单元一篇原版阅读，提升猜词与理解能力。</p>
+                </div>
+                <div class="gaosi-card">
+                    <div class="gaosi-cover"><img src="gaosi2.jpg" alt="语法闯关" onerror="this.innerHTML='📖'"></div>
+                    <strong>语法闯关</strong>
+                    <p style="font-size: 12px; margin-top: 6px;">梳理剑桥考级核心语法，趣味练习巩固。</p>
+                </div>
+                <div class="gaosi-card">
+                    <div class="gaosi-cover"><img src="gaosi3.jpg" alt="口语特训" onerror="this.innerHTML='📖'"></div>
+                    <strong>口语特训</strong>
+                    <p style="font-size: 12px; margin-top: 6px;">话题卡+模拟考官，突破开口障碍。</p>
+                </div>
             </div>
         </div>
     </section>
 
+    <!-- 课程亮点 (保留图片占位) -->
     <section id="highlights">
-        <div class="section-title">课程亮点 · 新课标导向+剑桥双核</div>
+        <div class="section-title">课程亮点 · 新课标+剑桥双核</div>
         <div class="section-sub">沉浸式课堂 | 四大核心素养</div>
         <div class="grid-3col">
             <div class="card">
-                <div style="margin-bottom:12px;"><img src="highlight1.jpg" alt="语言能力+文化意识" style="width:100%; border-radius:18px;" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22200%22%20height%3D%22120%22%20viewBox%3D%220%200%20200%20120%22%3E%3Crect%20width%3D%22200%22%20height%3D%22120%22%20fill%3D%22%23EFF3FA%22%2F%3E%3Ctext%20x%3D%2250%22%20y%3D%2260%22%20fill%3D%22%236B8EC7%22%3Ehighlight1.jpg%3C%2Ftext%3E%3C%2Fsvg%3E';"></div>
+                <img src="highlight1.jpg" alt="语言能力" style="width:100%; border-radius:20px; margin-bottom:14px;" onerror="this.src='data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22200%22%20height%3D%22120%22%20viewBox%3D%220%200%20200%20120%22%3E%3Crect%20width%3D%22200%22%20height%3D%22120%22%20fill%3D%22%23EFF3FA%22%2F%3E%3Ctext%20x%3D%2250%22%20y%3D%2260%22%20fill%3D%22%236B8EC7%22%3Ehighlight1.jpg%3C%2Ftext%3E%3C%2Fsvg%3E';">
                 <h3>语言能力+文化意识</h3>
                 <p>三大主题语境：人与自我/社会/自然，开拓国际视野。</p>
             </div>
             <div class="card">
-                <div style="margin-bottom:12px;"><img src="highlight2.jpg" alt="思维品质+学习能力" style="width:100%; border-radius:18px;" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22200%22%20height%3D%22120%22%20viewBox%3D%220%200%20200%20120%22%3E%3Crect%20width%3D%22200%22%20height%3D%22120%22%20fill%3D%22%23EFF3FA%22%2F%3E%3Ctext%20x%3D%2250%22%20y%3D%2260%22%20fill%3D%22%236B8EC7%22%3Ehighlight2.jpg%3C%2Ftext%3E%3C%2Fsvg%3E';"></div>
+                <img src="highlight2.jpg" alt="思维品质" style="width:100%; border-radius:20px; margin-bottom:14px;" onerror="this.src='data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22200%22%20height%3D%22120%22%20viewBox%3D%220%200%20200%20120%22%3E%3Crect%20width%3D%22200%22%20height%3D%22120%22%20fill%3D%22%23EFF3FA%22%2F%3E%3Ctext%20x%3D%2250%22%20y%3D%2260%22%20fill%3D%22%236B8EC7%22%3Ehighlight2.jpg%3C%2Ftext%3E%3C%2Fsvg%3E';">
                 <h3>思维品质+学习能力</h3>
                 <p>项目式学习，培养逻辑思维与自主学习策略。</p>
             </div>
             <div class="card">
-                <div style="margin-bottom:12px;"><img src="highlight3.jpg" alt="沉浸式互动课堂" style="width:100%; border-radius:18px;" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22200%22%20height%3D%22120%22%20viewBox%3D%220%200%20200%20120%22%3E%3Crect%20width%3D%22200%22%20height%3D%22120%22%20fill%3D%22%23EFF3FA%22%2F%3E%3Ctext%20x%3D%2250%22%20y%3D%2260%22%20fill%3D%22%236B8EC7%22%3Ehighlight3.jpg%3C%2Ftext%3E%3C%2Fsvg%3E';"></div>
+                <img src="highlight3.jpg" alt="互动课堂" style="width:100%; border-radius:20px; margin-bottom:14px;" onerror="this.src='data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22200%22%20height%3D%22120%22%20viewBox%3D%220%200%20200%20120%22%3E%3Crect%20width%3D%22200%22%20height%3D%22120%22%20fill%3D%22%23EFF3FA%22%2F%3E%3Ctext%20x%3D%2250%22%20y%3D%2260%22%20fill%3D%22%236B8EC7%22%3Ehighlight3.jpg%3C%2Ftext%3E%3C%2Fsvg%3E';">
                 <h3>沉浸式互动课堂</h3>
                 <p>全英授课+情境演绎，低年级以听说为核心，符合新课标学段目标。</p>
             </div>
@@ -461,54 +546,64 @@
         <div class="level-diagram">✨ 新课标体系 + 剑桥双向接轨：既符合国内教改，又衔接国际测评！</div>
     </section>
 
+    <!-- 2026暑秋课程 · 大纲 -->
     <section id="courseinfo">
-        <div class="section-title">2026暑秋课程 · 完整大纲</div>
-        <div class="section-sub">点击下方按钮，查看对应年级的暑秋详细大纲图片</div>
-        <div class="grid-2col">
-            <div class="card">
-                <h3><i class="fa-regular fa-calendar"></i> 课程形式 & 时间</h3>
-                <p>🏫 线下：海淀/朝阳/西城核心校区<br>💻 线上：直播互动小班<br>📅 暑假班7月-8月 (12次课) &nbsp; 秋季班9月-1月 (16次课)</p>
-                <p><i class="fa-regular fa-location-dot"></i> 校区：中关村、望京、公主坟、亚运村等</p>
-                <div class="test-link" style="margin-top:20px; background:#F0F7FF;">
-                    <i class="fa-regular fa-pen-to-square"></i> <strong>学情评估推荐</strong><br>
-                    <a href="#" class="btn-primary" style="margin-top:12px;">G1 评估预约</a>
-                    <a href="#" class="btn-primary" style="background:#F97316; margin-top:10px;">G2 评估预约</a>
-                </div>
+        <div class="section-title">2026暑秋课程 · 大纲</div>
+        <div class="section-sub">点击按钮展开查看详细大纲图片（含暑假和秋季）</div>
+
+        <div class="card">
+            <h3>学情评估推荐</h3>
+            <div class="btn-group">
+                <a href="https://ks.wjx.com/vm/tU8NS35.aspx#" class="btn-primary" target="_blank" rel="noopener noreferrer">大班学情评估</a>
+                <a href="https://ks.wjx.com/vm/PxkeNYR.aspx#" class="btn-primary" target="_blank" rel="noopener noreferrer">G1学情评估</a>
+                <a href="https://ks.wjx.com/vm/r1JEHU9.aspx#" class="btn-primary" target="_blank" rel="noopener noreferrer">G2学情评估</a>
             </div>
-            <div class="card">
-                <h3><i class="fa-regular fa-image"></i> 暑秋完整大纲</h3>
-                <div class="outline-buttons">
-                    <button class="btn-secondary" onclick="showOutline('K3')">📘 大班 (K3)</button>
-                    <button class="btn-secondary" onclick="showOutline('G1')">📗 一年级</button>
-                    <button class="btn-secondary" onclick="showOutline('G2')">📙 二年级</button>
-                </div>
-                <div id="outline-K3" class="outline-img-container">
-                    <img src="outline_K3.jpg" alt="大班K3暑秋大纲" onerror="this.parentElement.innerHTML='<div class=\'placeholder-img\'>📷 请将 outline_K3.jpg 放在同文件夹</div>'">
-                </div>
-                <div id="outline-G1" class="outline-img-container">
-                    <img src="outline_G1.jpg" alt="一年级暑秋大纲" onerror="this.parentElement.innerHTML='<div class=\'placeholder-img\'>📷 请将 outline_G1.jpg 放在同文件夹</div>'">
-                </div>
-                <div id="outline-G2" class="outline-img-container">
-                    <img src="outline_G2.jpg" alt="二年级暑秋大纲" onerror="this.parentElement.innerHTML='<div class=\'placeholder-img\'>📷 请将 outline_G2.jpg 放在同文件夹</div>'">
-                </div>
-                <p style="margin-top:16px; font-size:0.85rem;"><i class="fa-regular fa-lightbulb"></i> 建议先预约学情评估，选择最适合的班型。</p>
+        </div>
+
+        <div class="card">
+            <h3>📖 暑秋完整大纲（点击按钮查看）</h3>
+            <!-- 大班的两个按钮 -->
+            <div class="outline-buttons">
+                <button class="btn-secondary" onclick="showOutline('K3','summer')">📘 大班·暑假大纲</button>
+                <button class="btn-secondary" onclick="showOutline('K3','autumn')">📘 大班·秋季大纲</button>
             </div>
+            <div id="K3_summer" class="outline-img-container"><img src="outline_K3_summer.jpg" alt="大班暑假大纲" onerror="this.parentElement.innerHTML='<div class=\'placeholder-img\'>请放置 outline_K3_summer.jpg</div>'"></div>
+            <div id="K3_autumn" class="outline-img-container"><img src="outline_K3_autumn.jpg" alt="大班秋季大纲" onerror="this.parentElement.innerHTML='<div class=\'placeholder-img\'>请放置 outline_K3_autumn.jpg</div>'"></div>
+
+            <!-- 一年级两个按钮 -->
+            <div class="outline-buttons">
+                <button class="btn-secondary" onclick="showOutline('G1','summer')">📗 一年级·暑假大纲</button>
+                <button class="btn-secondary" onclick="showOutline('G1','autumn')">📗 一年级·秋季大纲</button>
+            </div>
+            <div id="G1_summer" class="outline-img-container"><img src="outline_G1_summer.jpg" alt="一年级暑假大纲" onerror="this.parentElement.innerHTML='<div class=\'placeholder-img\'>请放置 outline_G1_summer.jpg</div>'"></div>
+            <div id="G1_autumn" class="outline-img-container"><img src="outline_G1_autumn.jpg" alt="一年级秋季大纲" onerror="this.parentElement.innerHTML='<div class=\'placeholder-img\'>请放置 outline_G1_autumn.jpg</div>'"></div>
+
+            <!-- 二年级两个按钮 -->
+            <div class="outline-buttons">
+                <button class="btn-secondary" onclick="showOutline('G2','summer')">📙 二年级·暑假大纲</button>
+                <button class="btn-secondary" onclick="showOutline('G2','autumn')">📙 二年级·秋季大纲</button>
+            </div>
+            <div id="G2_summer" class="outline-img-container"><img src="outline_G2_summer.jpg" alt="二年级暑假大纲" onerror="this.parentElement.innerHTML='<div class=\'placeholder-img\'>请放置 outline_G2_summer.jpg</div>'"></div>
+            <div id="G2_autumn" class="outline-img-container"><img src="outline_G2_autumn.jpg" alt="二年级秋季大纲" onerror="this.parentElement.innerHTML='<div class=\'placeholder-img\'>请放置 outline_G2_autumn.jpg</div>'"></div>
+            <p class="level-diagram" style="margin-top: 24px;"><i class="fa-regular fa-image"></i> 图片较大时，可双指缩放查看完整内容。</p>
         </div>
     </section>
 
+    <!-- 师资团队 -->
     <section id="teachers">
         <div class="section-title">卓越师资 · 硬核教研</div>
-        <div class="section-sub">名校毕业+严选培训</div>
+        <div class="section-sub">名校毕业+严选培训，录取率低于5%</div>
         <div class="teacher-flex">
-            <div class="card" style="flex:1;"><h3><i class="fa-regular fa-user-graduate"></i> 师资介绍</h3><p>80%教师持英语专八/TKT证书，剑桥口语考官经验，平均教龄5年+。</p></div>
-            <div class="card" style="flex:1;"><h3><i class="fa-regular fa-list-check"></i> 选拔流程</h3><p>简历筛选→10轮磨课→岗前培训，录取率低于5%。</p></div>
-            <div class="card" style="flex:1;"><h3><i class="fa-regular fa-pen-ruler"></i> 产品设计亮点</h3><p>游戏化测评+AI语音反馈+演说家积分激励。</p></div>
+            <div class="card"><h3><i class="fa-regular fa-user-graduate"></i> 师资介绍</h3><p>80%教师持英语专八/TKT证书，剑桥口语考官经验，平均教龄5年+。</p></div>
+            <div class="card"><h3><i class="fa-regular fa-list-check"></i> 选拔流程</h3><p>简历筛选→10轮磨课→岗前培训，录取率低于5%。</p></div>
+            <div class="card"><h3><i class="fa-regular fa-pen-ruler"></i> 产品设计亮点</h3><p>游戏化测评+AI语音反馈+演说家积分激励。</p></div>
         </div>
-        <div style="margin-top:24px;text-align:center;">
-            <img src="teachers.jpg" alt="教研团队合影" style="max-width:100%;border-radius:28px;" onerror="this.onerror=null;this.parentElement.innerHTML='<div class=\'placeholder-img\' style=\'padding:30px;\'>👥 团队合影可放 teachers.jpg</div>'">
+        <div style="margin-top:24px; text-align:center;">
+            <img src="teachers.jpg" alt="教研团队合影" style="max-width:100%; border-radius:28px;" onerror="this.onerror=null;this.parentElement.innerHTML='<div class=\'placeholder-img\' style=\'padding:30px;\'>👥 团队合影可放 teachers.jpg</div>'">
         </div>
     </section>
 
+    <!-- 咨询方式 -->
     <section id="contact">
         <div class="section-title">立即咨询 · 抢占暑秋名额</div>
         <div class="section-sub">免费学习规划+学情诊断+试听名额</div>
@@ -521,14 +616,14 @@
                 <p><i class="fa-regular fa-phone"></i> 课程专线：400-668-XXXX</p>
                 <p><i class="fa-regular fa-message"></i> 王老师 / 刘老师 在线答疑</p>
                 <a href="#" class="btn-primary" style="margin-top:12px;display:inline-block;">课程报名链接</a>
-                <a href="#" class="btn-secondary" style="margin-top:10px;">1v1咨询</a>
+                <a href="#" class="btn-secondary" style="margin-left:12px;">1v1咨询</a>
             </div>
         </div>
     </section>
 </div>
 
 <div class="footer-contact">
-    <p>© 2026 演说家KB课程 · 北京小学英语培优 | 剑桥官方合作机构</p>
+    <p>© 2026 高思英语·KB课程 | 北京小学英语培优 | 剑桥官方合作机构</p>
     <p>海淀黄庄/朝阳望京/西城德胜  |  010-5678 9900</p>
 </div>
 </body>
