@@ -241,32 +241,27 @@
             color: #4A5B6E;
             margin-top: 4px;
         }
-        .gaosi-row {
+        /* 高思补充教材滚动条样式（一行显示） */
+        .supplement-scroll {
             display: flex;
-            flex-direction: column;
+            flex-wrap: nowrap;
+            overflow-x: auto;
             gap: 16px;
-            margin-top: 12px;
+            padding: 8px 0 16px;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: thin;
         }
-        .gaosi-card {
+        .supplement-card {
+            flex: 0 0 auto;
+            width: 150px;
             background: #F2F6FC;
             border-radius: 20px;
-            padding: 14px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            padding: 12px;
             text-align: center;
         }
-        @media (min-width: 600px) {
-            .gaosi-row {
-                flex-direction: row;
-            }
-            .gaosi-card {
-                flex: 1;
-            }
-        }
-        .gaosi-cover {
-            width: 85px;
-            height: 110px;
+        .supplement-cover {
+            width: 100%;
+            height: 120px;
             background: #E0EAFA;
             border-radius: 14px;
             display: flex;
@@ -274,7 +269,7 @@
             justify-content: center;
             margin-bottom: 10px;
         }
-        .gaosi-cover img {
+        .supplement-cover img {
             width: 100%;
             height: 100%;
             object-fit: cover;
@@ -287,15 +282,6 @@
             justify-content: center;
             margin: 16px 0;
         }
-        .outline-img-container {
-            display: none;
-            margin-top: 14px;
-        }
-        .outline-img-container img {
-            width: 100%;
-            border-radius: 20px;
-            box-shadow: 0 6px 16px rgba(0,0,0,0.1);
-        }
         .teacher-flex {
             display: flex;
             flex-direction: column;
@@ -306,31 +292,32 @@
                 flex-direction: row;
             }
         }
+        /* 立即咨询板块居中布局（按钮在左文字在右） */
         .contact-block {
             background: white;
             border-radius: 28px;
             padding: 24px 20px;
             display: flex;
             flex-direction: column;
+            align-items: center;
             gap: 20px;
             box-shadow: 0 6px 16px rgba(0,0,0,0.05);
         }
-        @media (min-width: 600px) {
+        @media (min-width: 500px) {
             .contact-block {
                 flex-direction: row;
-                align-items: center;
-                justify-content: space-between;
+                justify-content: center;
+                gap: 30px;
             }
         }
         .contact-left {
             flex-shrink: 0;
         }
         .contact-right {
-            flex: 1;
             text-align: left;
         }
         .contact-right p {
-            margin: 4px 0;
+            margin: 6px 0;
             font-size: 0.85rem;
             color: #2C3E50;
             display: flex;
@@ -340,12 +327,6 @@
         .contact-right i {
             color: #1E6DFF;
             width: 20px;
-        }
-        .test-link {
-            background: #FFF7E5;
-            border-radius: 24px;
-            padding: 16px;
-            margin-top: 16px;
         }
         .footer-contact {
             background: #1A2C3E;
@@ -372,10 +353,12 @@
         img {
             max-width: 100%;
             height: auto;
+            vertical-align: middle;
         }
         button, a {
             cursor: pointer;
         }
+        /* 弹窗样式 */
         .modal {
             display: none;
             position: fixed;
@@ -383,49 +366,55 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0,0,0,0.7);
-            z-index: 1000;
+            background: rgba(0,0,0,0.8);
+            z-index: 1100;
             align-items: center;
             justify-content: center;
+            overflow: auto;
         }
         .modal-content {
-            background: white;
-            border-radius: 24px;
-            padding: 24px;
+            background: transparent;
+            max-width: 95%;
+            max-height: 95%;
+            margin: auto;
             text-align: center;
-            max-width: 280px;
-            width: 80%;
         }
         .modal-content img {
-            width: 160px;
-            height: 160px;
-            margin-bottom: 16px;
+            max-width: 100%;
+            max-height: 90vh;
+            border-radius: 16px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.3);
         }
-        .modal-content button {
-            margin-top: 16px;
-            background: #1E6DFF;
+        .close-modal {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: rgba(0,0,0,0.6);
             color: white;
-            border: none;
-            padding: 8px 24px;
-            border-radius: 40px;
-            font-weight: 600;
+            font-size: 28px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 1101;
         }
     </style>
     <script>
-        function showOutline(grade, season) {
-            const ids = ['K3_summer', 'K3_autumn', 'G1_summer', 'G1_autumn', 'G2_summer', 'G2_autumn'];
-            ids.forEach(id => {
-                document.getElementById(id).style.display = 'none';
-            });
-            const targetId = grade + '_' + season;
-            const el = document.getElementById(targetId);
-            if (el) el.style.display = 'block';
-        }
-        function showQrcodeModal() {
-            document.getElementById('qrcodeModal').style.display = 'flex';
+        function showOutlineImage(imgUrl) {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            modalImg.src = imgUrl;
+            modal.style.display = 'flex';
         }
         function closeModal() {
-            document.getElementById('qrcodeModal').style.display = 'none';
+            document.getElementById('imageModal').style.display = 'none';
+        }
+        // 课程体系图弹窗
+        function showSystemMap() {
+            showOutlineImage('system_map.jpg');
         }
     </script>
 </head>
@@ -511,19 +500,21 @@
             <strong>能力收获：</strong>词汇量扩充至800+，能描述事件、表达观点，为KET预备。</p>
         </div>
 
-        <!-- 衔接冲刺 + 课程体系图 -->
+        <!-- 衔接冲刺 (独立卡片) -->
         <div class="card" style="background:#F0F7FF;">
             <h3>🚀 衔接冲刺 (G3起)</h3>
             <p>高阶对接KET/FCE考试，稳步实现学术英语与升学优势。</p>
             <p style="margin-top: 10px; font-size: 0.85rem; border-top: 1px solid #dce5f0; padding-top: 10px;"><strong>KB → Think 无缝衔接</strong>：KB3-4学完后，可直接进阶<strong>Think Starter</strong>教材。Think同样由剑桥大学出版社出版，体系连贯，内容紧贴KET/PET/FCE考试大纲。由KB培养的扎实语感和学习习惯，能够帮助孩子更顺畅地进入Think体系的学术英语学习，实现从少儿英语到青少年英语的平稳过渡。</p>
-            <div style="margin: 20px 0 0; text-align: center;">
-                <img src="system_map.jpg" alt="高思英语课程体系图" style="max-width:100%; border-radius:20px;" onerror="this.onerror=null;this.parentElement.innerHTML='<div class=\'placeholder-img\' style=\'padding:20px;\'>📷 请放置 system_map.jpg 课程体系图</div>'">
-                <p style="margin-top: 12px; font-size: 0.8rem; color: #5A6E84;">3~12岁贯通剑桥体系，让低龄段的孩子趣味启蒙。每个年级设置多个班层，采用同龄分层学习体系，根据孩子的英语水平能力匹配最合适的进度和难度。</p>
-            </div>
+        </div>
+
+        <!-- 课程体系图单独板块（可点击放大） -->
+        <div style="margin: 20px 0 0; text-align: center;">
+            <img src="system_map.jpg" alt="高思英语课程体系图" style="max-width:100%; border-radius:20px; cursor:pointer;" onclick="showSystemMap()" onerror="this.onerror=null;this.parentElement.innerHTML='<div class=\'placeholder-img\' style=\'padding:20px;\'>📷 请放置 system_map.jpg 课程体系图</div>'">
+            <p style="margin-top: 12px; font-size: 0.8rem; color: #5A6E84;">3~12岁贯通剑桥体系，让低龄段的孩子趣味启蒙。每个年级设置多个班层，采用同龄分层学习体系，根据孩子的英语水平能力匹配最合适的进度和难度。<br><span style="font-size:0.7rem; color:#1E6DFF;">点击图片可放大查看</span></p>
         </div>
     </section>
 
-    <!-- KB教材 -->
+    <!-- KB官方原版教材 + 高思补充（已按新结构修改） -->
     <section id="kb">
         <div class="section-title">KB官方原版教材 + 高思补充</div>
         <div class="section-sub">教材特点与收获说明</div>
@@ -553,26 +544,30 @@
                 </div>
             </div>
         </div>
-        <div style="margin-top: 16px;">
-            <h4 style="margin-bottom: 12px;">📚 高思补充教材（同步强化）</h4>
-            <div class="gaosi-row">
-                <div class="gaosi-card">
-                    <div class="gaosi-cover"><img src="gaosi1.jpg" alt="阅读强化" onerror="this.innerHTML='📖'"></div>
-                    <strong>阅读强化</strong>
-                    <p style="font-size: 11px; margin-top: 4px;">每单元一篇原版阅读，提升猜词与理解能力</p>
-                </div>
-                <div class="gaosi-card">
-                    <div class="gaosi-cover"><img src="gaosi2.jpg" alt="语法闯关" onerror="this.innerHTML='📖'"></div>
-                    <strong>语法闯关</strong>
-                    <p style="font-size: 11px; margin-top: 4px;">梳理剑桥考级核心语法，趣味练习巩固</p>
-                </div>
-                <div class="gaosi-card">
-                    <div class="gaosi-cover"><img src="gaosi3.jpg" alt="口语特训" onerror="this.innerHTML='📖'"></div>
-                    <strong>口语特训</strong>
-                    <p style="font-size: 11px; margin-top: 4px;">话题卡+模拟考官，突破开口障碍</p>
-                </div>
+
+        <!-- 高思补充教材：大班模块（五个图一行） -->
+        <div style="margin-top: 24px;">
+            <h4 style="margin-bottom: 12px;">📚 高思补充教材 · 大班专属</h4>
+            <div class="supplement-scroll">
+                <div class="supplement-card"><div class="supplement-cover"><img src="gaosi_global.jpg" alt="环球演说" onerror="this.innerHTML='🌍'"></div><strong>环球演说</strong><p style="font-size:11px; margin-top:6px;">拓展国际视野</p></div>
+                <div class="supplement-card"><div class="supplement-cover"><img src="gaosi_manual1.jpg" alt="能量手册" onerror="this.innerHTML='📘'"></div><strong>能量手册（两册）</strong><p style="font-size:11px;">①自然拼读模块<br>②KB0重点&听力音频</p></div>
+                <div class="supplement-card"><div class="supplement-cover"><img src="gaosi_gas.jpg" alt="加油站" onerror="this.innerHTML='⛽'"></div><strong>加油站</strong><p style="font-size:11px;">自然拼读模块练习</p></div>
+                <div class="supplement-card"><div class="supplement-cover"><img src="gaosi_cool.jpg" alt="降温站" onerror="this.innerHTML='❄️'"></div><strong>降温站</strong><p style="font-size:11px;">习题练习答案册</p></div>
+                <div class="supplement-card"><div class="supplement-cover"><img src="gaosi_energy.jpg" alt="能量站" onerror="this.innerHTML='🔋'"></div><strong>能量站</strong><p style="font-size:11px;">26字母拉环词卡</p></div>
             </div>
         </div>
+
+        <!-- 高思补充教材：一、二年级模块（四个图一行） -->
+        <div style="margin-top: 28px;">
+            <h4 style="margin-bottom: 12px;">📚 高思补充教材 · 一、二年级专属</h4>
+            <div class="supplement-scroll">
+                <div class="supplement-card"><div class="supplement-cover"><img src="gaosi_global2.jpg" alt="环球演说" onerror="this.innerHTML='🌍'"></div><strong>环球演说</strong><p style="font-size:11px;">拓展国际视野</p></div>
+                <div class="supplement-card"><div class="supplement-cover"><img src="gaosi_manual2.jpg" alt="能量手册" onerror="this.innerHTML='📘'"></div><strong>能量手册</strong><p style="font-size:11px;">教材知识总结</p></div>
+                <div class="supplement-card"><div class="supplement-cover"><img src="gaosi_charger.jpg" alt="充电站" onerror="this.innerHTML='🔌'"></div><strong>充电站</strong><p style="font-size:11px;">出门考习题册</p></div>
+                <div class="supplement-card"><div class="supplement-cover"><img src="gaosi_cool2.jpg" alt="降温站" onerror="this.innerHTML='❄️'"></div><strong>降温站</strong><p style="font-size:11px;">练习习题答案册</p></div>
+            </div>
+        </div>
+        <p style="font-size:12px; color:#8A9BB0; margin-top:16px; text-align:center;">* 图片仅为示意，具体以实物为准。</p>
     </section>
 
     <!-- 课程亮点 -->
@@ -599,7 +594,7 @@
         <div class="level-diagram">✨ 新课标体系 + 剑桥双向接轨：既符合国内教改，又衔接国际测评！</div>
     </section>
 
-    <!-- 暑秋课程 -->
+    <!-- 暑秋课程介绍 -->
     <section id="courseinfo">
         <div class="section-title">2026暑秋课程介绍 · 大纲</div>
         <div class="section-sub">课程形式安排 | 点击按钮查看详细大纲</div>
@@ -607,7 +602,12 @@
             <h3><i class="fa-regular fa-calendar"></i> 课程信息介绍</h3>
             <p><strong>上课形式：</strong>线下12个校区面授小班、线上在线小班均有</p>
             <div style="background: #F0F7FF; border-radius: 16px; padding: 12px; margin-top: 12px;">
-                <p><strong>📌 课程安排</strong></p>
+                <p><strong>📌 大班课程安排</strong></p>
+                <p>※ 暑假：连续授课，每次1.5小时，共12次课</p>
+                <p>※ 秋季：每周一次，每次1.5小时，共15次课</p>
+            </div>
+            <div style="background: #F0F7FF; border-radius: 16px; padding: 12px; margin-top: 12px;">
+                <p><strong>📌 G1-2课程安排</strong></p>
                 <p>※ 暑假：连续授课，每次2小时，共12次课</p>
                 <p>※ 秋季：每周一次，每次2小时，共15次课</p>
             </div>
@@ -620,33 +620,26 @@
                 <a href="https://ks.wjx.com/vm/r1JEHU9.aspx#" class="btn-primary" target="_blank" rel="noopener noreferrer">G2学情评估</a>
             </div>
         </div>
+
+        <!-- 暑秋完整大纲：按钮点击弹窗显示图片 -->
         <div class="card">
             <h3>📖 暑秋完整大纲</h3>
             <div class="outline-buttons">
-                <button class="btn-secondary" onclick="showOutline('K3','summer')">📘 大班·暑假大纲</button>
-                <button class="btn-secondary" onclick="showOutline('K3','autumn')">📘 大班·秋季大纲</button>
+                <button class="btn-secondary" onclick="showOutlineImage('outline_K3_summer.jpg')">📘 大班·暑假大纲</button>
+                <button class="btn-secondary" onclick="showOutlineImage('outline_K3_autumn.jpg')">📘 大班·秋季大纲</button>
             </div>
-            <div id="K3_summer" class="outline-img-container"><img src="outline_K3_summer.jpg" alt="大班暑假大纲" onerror="this.parentElement.innerHTML='<div class=\'placeholder-img\'>请放置 outline_K3_summer.jpg</div>'"></div>
-            <div id="K3_autumn" class="outline-img-container"><img src="outline_K3_autumn.jpg" alt="大班秋季大纲" onerror="this.parentElement.innerHTML='<div class=\'placeholder-img\'>请放置 outline_K3_autumn.jpg</div>'"></div>
-
             <div class="outline-buttons">
-                <button class="btn-secondary" onclick="showOutline('G1','summer')">📗 一年级·暑假大纲</button>
-                <button class="btn-secondary" onclick="showOutline('G1','autumn')">📗 一年级·秋季大纲</button>
+                <button class="btn-secondary" onclick="showOutlineImage('outline_G1_summer.jpg')">📗 一年级·暑假大纲</button>
+                <button class="btn-secondary" onclick="showOutlineImage('outline_G1_autumn.jpg')">📗 一年级·秋季大纲</button>
             </div>
-            <div id="G1_summer" class="outline-img-container"><img src="outline_G1_summer.jpg" alt="一年级暑假大纲" onerror="this.parentElement.innerHTML='<div class=\'placeholder-img\'>请放置 outline_G1_summer.jpg</div>'"></div>
-            <div id="G1_autumn" class="outline-img-container"><img src="outline_G1_autumn.jpg" alt="一年级秋季大纲" onerror="this.parentElement.innerHTML='<div class=\'placeholder-img\'>请放置 outline_G1_autumn.jpg</div>'"></div>
-
             <div class="outline-buttons">
-                <button class="btn-secondary" onclick="showOutline('G2','summer')">📙 二年级·暑假大纲</button>
-                <button class="btn-secondary" onclick="showOutline('G2','autumn')">📙 二年级·秋季大纲</button>
+                <button class="btn-secondary" onclick="showOutlineImage('outline_G2_summer.jpg')">📙 二年级·暑假大纲</button>
+                <button class="btn-secondary" onclick="showOutlineImage('outline_G2_autumn.jpg')">📙 二年级·秋季大纲</button>
             </div>
-            <div id="G2_summer" class="outline-img-container"><img src="outline_G2_summer.jpg" alt="二年级暑假大纲" onerror="this.parentElement.innerHTML='<div class=\'placeholder-img\'>请放置 outline_G2_summer.jpg</div>'"></div>
-            <div id="G2_autumn" class="outline-img-container"><img src="outline_G2_autumn.jpg" alt="二年级秋季大纲" onerror="this.parentElement.innerHTML='<div class=\'placeholder-img\'>请放置 outline_G2_autumn.jpg</div>'"></div>
-            <p class="level-diagram" style="margin-top: 20px;"><i class="fa-regular fa-image"></i> 图片较大时，可双指缩放查看完整内容。</p>
         </div>
     </section>
 
-    <!-- 师资团队 -->
+    <!-- 卓越师资（无合影照片） -->
     <section id="teachers">
         <div class="section-title">卓越师资 · 硬核教研</div>
         <div class="section-sub">名校毕业+严选培训，录取率低于5%</div>
@@ -655,12 +648,9 @@
             <div class="card"><h3><i class="fa-regular fa-list-check"></i> 选拔流程</h3><p>简历筛选→10轮磨课→岗前培训，录取率低于5%。</p></div>
             <div class="card"><h3><i class="fa-regular fa-pen-ruler"></i> 产品设计亮点</h3><p>游戏化测评+AI语音反馈+演说家积分激励。</p></div>
         </div>
-        <div style="margin-top:20px; text-align:center;">
-            <img src="teachers.jpg" alt="教研团队合影" style="max-width:100%; border-radius:24px;" onerror="this.onerror=null;this.parentElement.innerHTML='<div class=\'placeholder-img\' style=\'padding:24px;\'>👥 团队合影可放 teachers.jpg</div>'">
-        </div>
     </section>
 
-    <!-- 立即咨询·预约试听（已修改） -->
+    <!-- 立即咨询 · 预约试听（按钮在左，文字在右，居中） -->
     <section id="contact">
         <div class="section-title">立即咨询 · 预约试听</div>
         <div class="section-sub">免费学习规划+学情诊断+试听名额</div>
@@ -677,17 +667,35 @@
     </section>
 </div>
 
-<!-- 1v1咨询二维码弹窗 -->
-<div id="qrcodeModal" class="modal" onclick="closeModal()">
+<!-- 图片弹窗（支持双指缩放） -->
+<div id="imageModal" class="modal" onclick="closeModal()">
+    <div class="close-modal" onclick="closeModal()">✕</div>
     <div class="modal-content" onclick="event.stopPropagation()">
-        <img src="qrcode.png" alt="1v1咨询二维码" onerror="this.src='data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22100%22%20height%3D%22100%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23E9EDF2%22%2F%3E%3Ctext%20x%3D%2250%22%20y%3D%2250%22%20fill%3D%22%238A9BB0%22%3E二维码%3C%2Ftext%3E%3C%2Fsvg%3E'">
-        <p>扫一扫添加老师微信<br>获取1v1专属咨询</p>
-        <button onclick="closeModal()">关闭</button>
+        <img id="modalImage" src="" alt="大纲图" style="max-width:100%; max-height:90vh; width: auto; height: auto;">
+    </div>
+</div>
+
+<!-- 1v1咨询二维码弹窗 -->
+<div id="qrcodeModal" class="modal" onclick="closeQrcodeModal()">
+    <div class="close-modal" onclick="closeQrcodeModal()">✕</div>
+    <div class="modal-content" style="background: white; padding: 20px; border-radius: 24px; text-align: center;" onclick="event.stopPropagation()">
+        <img src="qrcode.png" alt="1v1咨询二维码" style="width: 200px; height: 200px;" onerror="this.src='data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%3Crect%20width%3D%22200%22%20height%3D%22200%22%20fill%3D%22%23E9EDF2%22%2F%3E%3Ctext%20x%3D%2250%22%20y%3D%22100%22%20fill%3D%22%238A9BB0%22%3E二维码%3C%2Ftext%3E%3C%2Fsvg%3E'">
+        <p style="margin-top: 16px;">扫一扫添加老师微信<br>获取1v1专属咨询</p>
+        <button onclick="closeQrcodeModal()" style="margin-top: 16px; background: #1E6DFF; color: white; border: none; padding: 8px 24px; border-radius: 40px;">关闭</button>
     </div>
 </div>
 
 <div class="footer-contact">
     <p><strong>高思英语 | 英语点亮新趣味，爱学才是真的会</strong></p>
 </div>
+
+<script>
+    function showQrcodeModal() {
+        document.getElementById('qrcodeModal').style.display = 'flex';
+    }
+    function closeQrcodeModal() {
+        document.getElementById('qrcodeModal').style.display = 'none';
+    }
+</script>
 </body>
 </html>
