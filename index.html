@@ -306,23 +306,40 @@
                 flex-direction: row;
             }
         }
-        .contact-buttons {
+        .contact-block {
             background: white;
             border-radius: 28px;
             padding: 24px 20px;
             display: flex;
             flex-direction: column;
-            align-items: center;
             gap: 20px;
-            text-align: center;
             box-shadow: 0 6px 16px rgba(0,0,0,0.05);
         }
         @media (min-width: 600px) {
-            .contact-buttons {
+            .contact-block {
                 flex-direction: row;
-                justify-content: center;
-                gap: 30px;
+                align-items: center;
+                justify-content: space-between;
             }
+        }
+        .contact-left {
+            flex-shrink: 0;
+        }
+        .contact-right {
+            flex: 1;
+            text-align: left;
+        }
+        .contact-right p {
+            margin: 4px 0;
+            font-size: 0.85rem;
+            color: #2C3E50;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .contact-right i {
+            color: #1E6DFF;
+            width: 20px;
         }
         .test-link {
             background: #FFF7E5;
@@ -460,7 +477,7 @@
         </div>
     </section>
 
-    <!-- 剑桥介绍 -->
+    <!-- 剑桥体系 -->
     <section id="cambridge">
         <div class="section-title">剑桥英语体系 · 权威领航</div>
         <div class="section-sub">YLE / KET 科学分级，全球信赖</div>
@@ -494,12 +511,11 @@
             <strong>能力收获：</strong>词汇量扩充至800+，能描述事件、表达观点，为KET预备。</p>
         </div>
 
-        <!-- 衔接冲刺 + 课程体系图移至此 -->
+        <!-- 衔接冲刺 + 课程体系图 -->
         <div class="card" style="background:#F0F7FF;">
             <h3>🚀 衔接冲刺 (G3起)</h3>
             <p>高阶对接KET/FCE考试，稳步实现学术英语与升学优势。</p>
             <p style="margin-top: 10px; font-size: 0.85rem; border-top: 1px solid #dce5f0; padding-top: 10px;"><strong>KB → Think 无缝衔接</strong>：KB3-4学完后，可直接进阶<strong>Think Starter</strong>教材。Think同样由剑桥大学出版社出版，体系连贯，内容紧贴KET/PET/FCE考试大纲。由KB培养的扎实语感和学习习惯，能够帮助孩子更顺畅地进入Think体系的学术英语学习，实现从少儿英语到青少年英语的平稳过渡。</p>
-            <!-- 课程体系图放在这里 -->
             <div style="margin: 20px 0 0; text-align: center;">
                 <img src="system_map.jpg" alt="高思英语课程体系图" style="max-width:100%; border-radius:20px;" onerror="this.onerror=null;this.parentElement.innerHTML='<div class=\'placeholder-img\' style=\'padding:20px;\'>📷 请放置 system_map.jpg 课程体系图</div>'">
                 <p style="margin-top: 12px; font-size: 0.8rem; color: #5A6E84;">3~12岁贯通剑桥体系，让低龄段的孩子趣味启蒙。每个年级设置多个班层，采用同龄分层学习体系，根据孩子的英语水平能力匹配最合适的进度和难度。</p>
@@ -507,7 +523,7 @@
         </div>
     </section>
 
-    <!-- KB教材板块 -->
+    <!-- KB教材 -->
     <section id="kb">
         <div class="section-title">KB官方原版教材 + 高思补充</div>
         <div class="section-sub">教材特点与收获说明</div>
@@ -537,7 +553,6 @@
                 </div>
             </div>
         </div>
-
         <div style="margin-top: 16px;">
             <h4 style="margin-bottom: 12px;">📚 高思补充教材（同步强化）</h4>
             <div class="gaosi-row">
@@ -584,11 +599,10 @@
         <div class="level-diagram">✨ 新课标体系 + 剑桥双向接轨：既符合国内教改，又衔接国际测评！</div>
     </section>
 
-    <!-- 暑秋课程介绍 -->
+    <!-- 暑秋课程 -->
     <section id="courseinfo">
         <div class="section-title">2026暑秋课程介绍 · 大纲</div>
         <div class="section-sub">课程形式安排 | 点击按钮查看详细大纲</div>
-
         <div class="card">
             <h3><i class="fa-regular fa-calendar"></i> 课程信息介绍</h3>
             <p><strong>上课形式：</strong>线下12个校区面授小班、线上在线小班均有</p>
@@ -598,7 +612,6 @@
                 <p>※ 秋季：每周一次，每次2小时，共15次课</p>
             </div>
         </div>
-
         <div class="card">
             <h3>📋 学情评估推荐</h3>
             <div class="btn-group">
@@ -607,7 +620,6 @@
                 <a href="https://ks.wjx.com/vm/r1JEHU9.aspx#" class="btn-primary" target="_blank" rel="noopener noreferrer">G2学情评估</a>
             </div>
         </div>
-
         <div class="card">
             <h3>📖 暑秋完整大纲</h3>
             <div class="outline-buttons">
@@ -648,13 +660,19 @@
         </div>
     </section>
 
-    <!-- 立即咨询板块：只保留两个按钮，无二维码图片 -->
+    <!-- 立即咨询·预约试听（已修改） -->
     <section id="contact">
-        <div class="section-title">立即咨询 · 抢占暑秋名额</div>
+        <div class="section-title">立即咨询 · 预约试听</div>
         <div class="section-sub">免费学习规划+学情诊断+试听名额</div>
-        <div class="contact-buttons">
-            <a href="#" class="btn-primary" style="display:inline-block;" onclick="window.location.href='weixin://dl/business/?appid=wx1234567890'">📱 课程报名链接</a>
-            <button class="btn-secondary" onclick="showQrcodeModal()">💬 1v1咨询</button>
+        <div class="contact-block">
+            <div class="contact-left">
+                <button class="btn-secondary" onclick="showQrcodeModal()">💬 1v1咨询</button>
+            </div>
+            <div class="contact-right">
+                <p><i class="fa-regular fa-calendar-check"></i> 免费学习规划</p>
+                <p><i class="fa-regular fa-file-lines"></i> 学情评估推荐</p>
+                <p><i class="fa-regular fa-headset"></i> 试听名额预约</p>
+            </div>
         </div>
     </section>
 </div>
