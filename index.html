@@ -629,22 +629,24 @@
             </div>
         </div>
 
-        <!-- 暑秋完整大纲：按钮文字改为“暑秋课程大纲详情” -->
-        <div class="card">
-            <h3>📖 暑秋课程大纲详情</h3>
-            <div class="outline-buttons">
-                <button class="btn-secondary" onclick="showOutlineImage('outline_K3_summer.jpg')">📘 大班·暑假大纲</button>
-                <button class="btn-secondary" onclick="showOutlineImage('outline_K3_autumn.jpg')">📘 大班·秋季大纲</button>
-            </div>
-            <div class="outline-buttons">
-                <button class="btn-secondary" onclick="showOutlineImage('outline_G1_summer.jpg')">📗 G1·暑假大纲</button>
-                <button class="btn-secondary" onclick="showOutlineImage('outline_G1_autumn.jpg')">📗 G1·秋季大纲</button>
-            </div>
-            <div class="outline-buttons">
-                <button class="btn-secondary" onclick="showOutlineImage('outline_G2_summer.jpg')">📙 G2·暑假大纲</button>
-                <button class="btn-secondary" onclick="showOutlineImage('outline_G2_autumn.jpg')">📙 G2·秋季大纲</button>
-            </div>
-        </div>
+<div class="card">
+    <h3>📖 暑秋课程大纲详情</h3>
+    <!-- 大班两个按钮居中一行 -->
+    <div class="outline-buttons" style="display: flex; flex-wrap: nowrap; justify-content: center; overflow-x: auto; gap: 10px;">
+        <button class="btn-secondary" style="white-space: nowrap;" onclick="showOutlineImage('outline_K3_summer.jpg')">📘 大班·暑假大纲</button>
+        <button class="btn-secondary" style="white-space: nowrap;" onclick="showOutlineImage('outline_K3_autumn.jpg')">📘 大班·秋季大纲</button>
+    </div>
+    <!-- G1两个按钮居中一行 -->
+    <div class="outline-buttons" style="display: flex; flex-wrap: nowrap; justify-content: center; overflow-x: auto; gap: 10px;">
+        <button class="btn-secondary" style="white-space: nowrap;" onclick="showOutlineImage('outline_G1_summer.jpg')">📗 G1·暑假大纲</button>
+        <button class="btn-secondary" style="white-space: nowrap;" onclick="showOutlineImage('outline_G1_autumn.jpg')">📗 G1·秋季大纲</button>
+    </div>
+    <!-- G2两个按钮居中一行 -->
+    <div class="outline-buttons" style="display: flex; flex-wrap: nowrap; justify-content: center; overflow-x: auto; gap: 10px;">
+        <button class="btn-secondary" style="white-space: nowrap;" onclick="showOutlineImage('outline_G2_summer.jpg')">📙 G2·暑假大纲</button>
+        <button class="btn-secondary" style="white-space: nowrap;" onclick="showOutlineImage('outline_G2_autumn.jpg')">📙 G2·秋季大纲</button>
+    </div>
+</div>
     </section>
 
 <section id="teachers">
