@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
-    <title>高思英语·KB课程介绍 | 北京大班-2年级英语培优</title>
+    <title>高思英语·KB课程介绍 </title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <style>
@@ -149,11 +149,13 @@
             font-size: 0.85rem;
             transition: 0.2s;
             word-break: keep-all;
+            cursor: pointer;
         }
         .btn-primary {
             background: #1E6DFF;
             color: white;
             box-shadow: 0 4px 10px rgba(30,109,255,0.25);
+            border: none;
         }
         .btn-secondary {
             background: white;
@@ -261,19 +263,19 @@
         }
         .supplement-cover {
             width: 100%;
-            height: 120px;
+            aspect-ratio: 3 / 4;
             background: #E0EAFA;
             border-radius: 14px;
             display: flex;
             align-items: center;
             justify-content: center;
             margin-bottom: 10px;
+            overflow: hidden;
         }
         .supplement-cover img {
             width: 100%;
             height: 100%;
-            object-fit: cover;
-            border-radius: 14px;
+            object-fit: contain;
         }
         .outline-buttons {
             display: flex;
@@ -292,7 +294,6 @@
                 flex-direction: row;
             }
         }
-        /* 立即咨询板块居中布局（按钮在左文字在右） */
         .contact-block {
             background: white;
             border-radius: 28px;
@@ -412,9 +413,14 @@
         function closeModal() {
             document.getElementById('imageModal').style.display = 'none';
         }
-        // 课程体系图弹窗
         function showSystemMap() {
             showOutlineImage('system_map.jpg');
+        }
+        function showQrcodeModal() {
+            document.getElementById('qrcodeModal').style.display = 'flex';
+        }
+        function closeQrcodeModal() {
+            document.getElementById('qrcodeModal').style.display = 'none';
         }
     </script>
 </head>
@@ -434,10 +440,10 @@
         <div class="hero-content">
             <div class="hero-badge"><i class="fa-regular fa-star"></i> 2026暑秋KB产品介绍</div>
             <h1>高思演说家·Kid's Box体系<br><span class="highlight-orange">剑桥体系 + 互动教学</span>双核驱动</h1>
-            <p>专为北京大班-2年级设计 | 无缝衔接YLE/KET | 高频互动课堂</p>
+            <p>专为大班-2年级设计 | 无缝衔接YLE/KET | 高频互动课堂</p>
             <div class="btn-group">
-                <a href="#courseinfo" class="btn-primary">查看暑秋课表</a>
-                <a href="#contact" class="btn-secondary">预约学情评估</a>
+                <a href="#courseinfo" class="btn-primary">查看暑秋课程安排</a>
+                <button class="btn-secondary" onclick="showQrcodeModal()">预约学情评估</button>
             </div>
         </div>
     </div>
@@ -500,21 +506,21 @@
             <strong>能力收获：</strong>词汇量扩充至800+，能描述事件、表达观点，为KET预备。</p>
         </div>
 
-        <!-- 衔接冲刺 (独立卡片) -->
+        <!-- 衔接冲刺 -->
         <div class="card" style="background:#F0F7FF;">
             <h3>🚀 衔接冲刺 (G3起)</h3>
             <p>高阶对接KET/FCE考试，稳步实现学术英语与升学优势。</p>
             <p style="margin-top: 10px; font-size: 0.85rem; border-top: 1px solid #dce5f0; padding-top: 10px;"><strong>KB → Think 无缝衔接</strong>：KB3-4学完后，可直接进阶<strong>Think Starter</strong>教材。Think同样由剑桥大学出版社出版，体系连贯，内容紧贴KET/PET/FCE考试大纲。由KB培养的扎实语感和学习习惯，能够帮助孩子更顺畅地进入Think体系的学术英语学习，实现从少儿英语到青少年英语的平稳过渡。</p>
         </div>
 
-        <!-- 课程体系图单独板块（可点击放大） -->
+        <!-- 课程体系图单独板块（无“点击放大”提示） -->
         <div style="margin: 20px 0 0; text-align: center;">
             <img src="system_map.jpg" alt="高思英语课程体系图" style="max-width:100%; border-radius:20px; cursor:pointer;" onclick="showSystemMap()" onerror="this.onerror=null;this.parentElement.innerHTML='<div class=\'placeholder-img\' style=\'padding:20px;\'>📷 请放置 system_map.jpg 课程体系图</div>'">
-            <p style="margin-top: 12px; font-size: 0.8rem; color: #5A6E84;">3~12岁贯通剑桥体系，让低龄段的孩子趣味启蒙。每个年级设置多个班层，采用同龄分层学习体系，根据孩子的英语水平能力匹配最合适的进度和难度。<br><span style="font-size:0.7rem; color:#1E6DFF;">点击图片可放大查看</span></p>
+            <p style="margin-top: 12px; font-size: 0.8rem; color: #5A6E84;">3~12岁贯通剑桥体系，让低龄段的孩子趣味启蒙。每个年级设置多个班层，采用同龄分层学习体系，根据孩子的英语水平能力匹配最合适的进度和难度。</p>
         </div>
     </section>
 
-    <!-- KB官方原版教材 + 高思补充（已按新结构修改） -->
+    <!-- KB官方原版教材 + 高思补充 -->
     <section id="kb">
         <div class="section-title">KB官方原版教材 + 高思补充</div>
         <div class="section-sub">教材特点与收获说明</div>
@@ -548,6 +554,7 @@
         <!-- 高思补充教材：大班模块（五个图一行） -->
         <div style="margin-top: 24px;">
             <h4 style="margin-bottom: 12px;">📚 高思补充教材 · 大班专属</h4>
+            <div class="section-sub" style="margin-bottom: 12px;">课前课后巩固强化，学习效果有保障</div>
             <div class="supplement-scroll">
                 <div class="supplement-card"><div class="supplement-cover"><img src="gaosi_global.jpg" alt="环球演说" onerror="this.innerHTML='🌍'"></div><strong>环球演说</strong><p style="font-size:11px; margin-top:6px;">拓展国际视野</p></div>
                 <div class="supplement-card"><div class="supplement-cover"><img src="gaosi_manual1.jpg" alt="能量手册" onerror="this.innerHTML='📘'"></div><strong>能量手册（两册）</strong><p style="font-size:11px;">①自然拼读模块<br>②KB0重点&听力音频</p></div>
@@ -560,6 +567,7 @@
         <!-- 高思补充教材：一、二年级模块（四个图一行） -->
         <div style="margin-top: 28px;">
             <h4 style="margin-bottom: 12px;">📚 高思补充教材 · 一、二年级专属</h4>
+            <div class="section-sub" style="margin-bottom: 12px;">课前课后巩固强化，学习效果有保障</div>
             <div class="supplement-scroll">
                 <div class="supplement-card"><div class="supplement-cover"><img src="gaosi_global2.jpg" alt="环球演说" onerror="this.innerHTML='🌍'"></div><strong>环球演说</strong><p style="font-size:11px;">拓展国际视野</p></div>
                 <div class="supplement-card"><div class="supplement-cover"><img src="gaosi_manual2.jpg" alt="能量手册" onerror="this.innerHTML='📘'"></div><strong>能量手册</strong><p style="font-size:11px;">教材知识总结</p></div>
@@ -597,7 +605,7 @@
     <!-- 暑秋课程介绍 -->
     <section id="courseinfo">
         <div class="section-title">2026暑秋课程介绍 · 大纲</div>
-        <div class="section-sub">课程形式安排 | 点击按钮查看详细大纲</div>
+        <div class="section-sub">课程形式安排 | 点击按钮查看大纲</div>
         <div class="card">
             <h3><i class="fa-regular fa-calendar"></i> 课程信息介绍</h3>
             <p><strong>上课形式：</strong>线下12个校区面授小班、线上在线小班均有</p>
@@ -621,9 +629,9 @@
             </div>
         </div>
 
-        <!-- 暑秋完整大纲：按钮点击弹窗显示图片 -->
+        <!-- 暑秋完整大纲：按钮文字改为“暑秋课程大纲详情” -->
         <div class="card">
-            <h3>📖 暑秋完整大纲</h3>
+            <h3>📖 暑秋课程大纲详情</h3>
             <div class="outline-buttons">
                 <button class="btn-secondary" onclick="showOutlineImage('outline_K3_summer.jpg')">📘 大班·暑假大纲</button>
                 <button class="btn-secondary" onclick="showOutlineImage('outline_K3_autumn.jpg')">📘 大班·秋季大纲</button>
@@ -639,18 +647,34 @@
         </div>
     </section>
 
-    <!-- 卓越师资（无合影照片） -->
-    <section id="teachers">
-        <div class="section-title">卓越师资 · 硬核教研</div>
-        <div class="section-sub">名校毕业+严选培训，录取率低于5%</div>
-        <div class="teacher-flex">
-            <div class="card"><h3><i class="fa-regular fa-user-graduate"></i> 师资介绍</h3><p>80%教师持英语专八/TKT证书，剑桥口语考官经验，平均教龄5年+。</p></div>
-            <div class="card"><h3><i class="fa-regular fa-list-check"></i> 选拔流程</h3><p>简历筛选→10轮磨课→岗前培训，录取率低于5%。</p></div>
-            <div class="card"><h3><i class="fa-regular fa-pen-ruler"></i> 产品设计亮点</h3><p>游戏化测评+AI语音反馈+演说家积分激励。</p></div>
+<section id="teachers">
+    <div class="section-title">卓越师资 · 硬核教研</div>
+    <div class="section-sub">名校毕业+严选培训，录取率低于5%</div>
+    <div class="teacher-flex">
+        <!-- 师资介绍 -->
+        <div class="card">
+            <h3><i class="fa-regular fa-user-graduate"></i> 师资介绍</h3>
+            <p>• 985/211 C9院校英语专业，相关专业证书加持，保障教师专业度。</p>
+            <p>• 长线课：每周一次集体备课，集训课：每天密集备课，做到【不批课 不上课】。</p>
+            <p>• 每年两次的教师风采大赛，持续探索多样化教学风格。</p>
         </div>
-    </section>
+        <!-- 教师选拔流程 -->
+        <div class="card">
+            <h3><i class="fa-regular fa-list-check"></i> 教师选拔流程</h3>
+            <p>• 简历筛选 → 岗前培训 → 选拔考核 → 岗后培训 → 选拔考核</p>
+            <p>• 通过考核后进入磨课环节，达标后予以排课。</p>
+        </div>
+        <!-- 教研产品设计 -->
+        <div class="card">
+            <h3><i class="fa-regular fa-pen-ruler"></i> 教研产品设计</h3>
+            <p>• 依托原版教材优势，产品内容&环节更适合非母语学习者。</p>
+            <p>• 高频游戏化设计，持续保障孩子学习兴趣。</p>
+            <p>• 产品分层设计，保障课程内容更适合本班级。</p>
+        </div>
+    </div>
+</section>
 
-    <!-- 立即咨询 · 预约试听（按钮在左，文字在右，居中） -->
+    <!-- 立即咨询 · 预约试听 -->
     <section id="contact">
         <div class="section-title">立即咨询 · 预约试听</div>
         <div class="section-sub">免费学习规划+学情诊断+试听名额</div>
@@ -688,14 +712,5 @@
 <div class="footer-contact">
     <p><strong>高思英语 | 英语点亮新趣味，爱学才是真的会</strong></p>
 </div>
-
-<script>
-    function showQrcodeModal() {
-        document.getElementById('qrcodeModal').style.display = 'flex';
-    }
-    function closeQrcodeModal() {
-        document.getElementById('qrcodeModal').style.display = 'none';
-    }
-</script>
 </body>
 </html>
