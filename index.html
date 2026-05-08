@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
-    <title>高思英语·KB课程介绍 </title>
+    <title>高思英语·KB课程介绍</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <style>
@@ -279,9 +279,7 @@
         }
         .outline-buttons {
             display: flex;
-            flex-wrap: wrap;
             gap: 10px;
-            justify-content: center;
             margin: 16px 0;
         }
         .teacher-flex {
@@ -402,6 +400,19 @@
             cursor: pointer;
             z-index: 1101;
         }
+        /* 学情评估按钮垂直居中一行一个 */
+        .eval-buttons {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            margin-top: 16px;
+        }
+        .eval-buttons .btn-primary {
+            width: 80%;
+            max-width: 280px;
+            text-align: center;
+        }
     </style>
     <script>
         function showOutlineImage(imgUrl) {
@@ -440,7 +451,7 @@
         <div class="hero-content">
             <div class="hero-badge"><i class="fa-regular fa-star"></i> 2026暑秋KB产品介绍</div>
             <h1>高思演说家·Kid's Box体系<br><span class="highlight-orange">剑桥体系 + 互动教学</span>双核驱动</h1>
-            <p>专为大班-2年级设计 | 无缝衔接YLE/KET | 高频互动课堂</p>
+            <p>专为大班-二年级设计 | 对标YLE | 高频互动课堂</p>
             <div class="btn-group">
                 <a href="#courseinfo" class="btn-primary">查看暑秋课程安排</a>
                 <button class="btn-secondary" onclick="showQrcodeModal()">预约学情评估</button>
@@ -551,7 +562,7 @@
             </div>
         </div>
 
-        <!-- 高思补充教材：大班模块（五个图一行） -->
+        <!-- 高思补充教材：大班模块 -->
         <div style="margin-top: 24px;">
             <h4 style="margin-bottom: 12px;">📚 高思补充教材 · 大班专属</h4>
             <div class="section-sub" style="margin-bottom: 12px;">课前课后巩固强化，学习效果有保障</div>
@@ -564,7 +575,7 @@
             </div>
         </div>
 
-        <!-- 高思补充教材：一、二年级模块（四个图一行） -->
+        <!-- 高思补充教材：一、二年级模块 -->
         <div style="margin-top: 28px;">
             <h4 style="margin-bottom: 12px;">📚 高思补充教材 · 一、二年级专属</h4>
             <div class="section-sub" style="margin-bottom: 12px;">课前课后巩固强化，学习效果有保障</div>
@@ -622,59 +633,58 @@
         </div>
         <div class="card">
             <h3>📋 学情评估推荐</h3>
-            <div class="btn-group">
+            <div class="eval-buttons">
                 <a href="https://ks.wjx.com/vm/tU8NS35.aspx#" class="btn-primary" target="_blank" rel="noopener noreferrer">大班学情评估</a>
                 <a href="https://ks.wjx.com/vm/PxkeNYR.aspx#" class="btn-primary" target="_blank" rel="noopener noreferrer">G1学情评估</a>
                 <a href="https://ks.wjx.com/vm/r1JEHU9.aspx#" class="btn-primary" target="_blank" rel="noopener noreferrer">G2学情评估</a>
             </div>
         </div>
 
-<div class="card">
-    <h3>📖 暑秋课程大纲详情</h3>
-    <!-- 大班两个按钮居中一行 -->
-    <div class="outline-buttons" style="display: flex; flex-wrap: nowrap; justify-content: center; overflow-x: auto; gap: 10px;">
-        <button class="btn-secondary" style="white-space: nowrap;" onclick="showOutlineImage('outline_K3_summer.jpg')">📘 大班·暑假大纲</button>
-        <button class="btn-secondary" style="white-space: nowrap;" onclick="showOutlineImage('outline_K3_autumn.jpg')">📘 大班·秋季大纲</button>
-    </div>
-    <!-- G1两个按钮居中一行 -->
-    <div class="outline-buttons" style="display: flex; flex-wrap: nowrap; justify-content: center; overflow-x: auto; gap: 10px;">
-        <button class="btn-secondary" style="white-space: nowrap;" onclick="showOutlineImage('outline_G1_summer.jpg')">📗 G1·暑假大纲</button>
-        <button class="btn-secondary" style="white-space: nowrap;" onclick="showOutlineImage('outline_G1_autumn.jpg')">📗 G1·秋季大纲</button>
-    </div>
-    <!-- G2两个按钮居中一行 -->
-    <div class="outline-buttons" style="display: flex; flex-wrap: nowrap; justify-content: center; overflow-x: auto; gap: 10px;">
-        <button class="btn-secondary" style="white-space: nowrap;" onclick="showOutlineImage('outline_G2_summer.jpg')">📙 G2·暑假大纲</button>
-        <button class="btn-secondary" style="white-space: nowrap;" onclick="showOutlineImage('outline_G2_autumn.jpg')">📙 G2·秋季大纲</button>
-    </div>
-</div>
+        <!-- 暑秋课程大纲详情（居中一行一个年级两个按钮） -->
+        <div class="card">
+            <h3>📖 暑秋课程大纲详情</h3>
+            <!-- 大班两个按钮居中一行 -->
+            <div class="outline-buttons" style="display: flex; flex-wrap: nowrap; justify-content: center; overflow-x: auto; gap: 10px;">
+                <button class="btn-secondary" style="white-space: nowrap;" onclick="showOutlineImage('outline_K3_summer.jpg')">📘 大班·暑假大纲</button>
+                <button class="btn-secondary" style="white-space: nowrap;" onclick="showOutlineImage('outline_K3_autumn.jpg')">📘 大班·秋季大纲</button>
+            </div>
+            <!-- G1两个按钮居中一行 -->
+            <div class="outline-buttons" style="display: flex; flex-wrap: nowrap; justify-content: center; overflow-x: auto; gap: 10px;">
+                <button class="btn-secondary" style="white-space: nowrap;" onclick="showOutlineImage('outline_G1_summer.jpg')">📗 G1·暑假大纲</button>
+                <button class="btn-secondary" style="white-space: nowrap;" onclick="showOutlineImage('outline_G1_autumn.jpg')">📗 G1·秋季大纲</button>
+            </div>
+            <!-- G2两个按钮居中一行 -->
+            <div class="outline-buttons" style="display: flex; flex-wrap: nowrap; justify-content: center; overflow-x: auto; gap: 10px;">
+                <button class="btn-secondary" style="white-space: nowrap;" onclick="showOutlineImage('outline_G2_summer.jpg')">📙 G2·暑假大纲</button>
+                <button class="btn-secondary" style="white-space: nowrap;" onclick="showOutlineImage('outline_G2_autumn.jpg')">📙 G2·秋季大纲</button>
+            </div>
+        </div>
     </section>
 
-<section id="teachers">
-    <div class="section-title">卓越师资 · 硬核教研</div>
-    <div class="section-sub">名校毕业+严选培训，录取率低于5%</div>
-    <div class="teacher-flex">
-        <!-- 师资介绍 -->
-        <div class="card">
-            <h3><i class="fa-regular fa-user-graduate"></i> 师资介绍</h3>
-            <p>• 985/211 C9院校英语专业，相关专业证书加持，保障教师专业度。</p>
-            <p>• 长线课：每周一次集体备课，集训课：每天密集备课，做到【不批课 不上课】。</p>
-            <p>• 每年两次的教师风采大赛，持续探索多样化教学风格。</p>
+    <!-- 卓越师资 · 硬核教研 -->
+    <section id="teachers">
+        <div class="section-title">卓越师资 · 硬核教研</div>
+        <div class="section-sub">名校毕业+严选培训，录取率低于5%</div>
+        <div class="teacher-flex">
+            <div class="card">
+                <h3><i class="fa-regular fa-user-graduate"></i> 师资介绍</h3>
+                <p>• 985/211 C9院校英语专业，相关专业证书加持，保障教师专业度。</p>
+                <p>• 长线课：每周一次集体备课，集训课：每天密集备课，做到【不批课 不上课】。</p>
+                <p>• 每年两次的教师风采大赛，持续探索多样化教学风格。</p>
+            </div>
+            <div class="card">
+                <h3><i class="fa-regular fa-list-check"></i> 教师选拔流程</h3>
+                <p>• 简历筛选 → 岗前培训 → 选拔考核 → 岗后培训 → 选拔考核</p>
+                <p>• 通过考核后进入磨课环节，达标后予以排课。</p>
+            </div>
+            <div class="card">
+                <h3><i class="fa-regular fa-pen-ruler"></i> 教研产品设计</h3>
+                <p>• 依托原版教材优势，产品内容&环节更适合非母语学习者。</p>
+                <p>• 高频游戏化设计，持续保障孩子学习兴趣。</p>
+                <p>• 产品分层设计，保障课程内容更适合本班级。</p>
+            </div>
         </div>
-        <!-- 教师选拔流程 -->
-        <div class="card">
-            <h3><i class="fa-regular fa-list-check"></i> 教师选拔流程</h3>
-            <p>• 简历筛选 → 岗前培训 → 选拔考核 → 岗后培训 → 选拔考核</p>
-            <p>• 通过考核后进入磨课环节，达标后予以排课。</p>
-        </div>
-        <!-- 教研产品设计 -->
-        <div class="card">
-            <h3><i class="fa-regular fa-pen-ruler"></i> 教研产品设计</h3>
-            <p>• 依托原版教材优势，产品内容&环节更适合非母语学习者。</p>
-            <p>• 高频游戏化设计，持续保障孩子学习兴趣。</p>
-            <p>• 产品分层设计，保障课程内容更适合本班级。</p>
-        </div>
-    </div>
-</section>
+    </section>
 
     <!-- 立即咨询 · 预约试听 -->
     <section id="contact">
